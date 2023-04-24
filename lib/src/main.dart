@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
       
       home: LoginScreen());
   }
-
 }
 
 class AppScrollBehavior extends MaterialScrollBehavior {

@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                         children: [
                             Text(
                                 'username'.i18n(),
-                                style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),
+                                style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
                             ),
                         ],
                     ),
@@ -64,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                                         border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(20.0),
                                             borderSide: BorderSide(
-                                                color: Color.fromRGBO(2, 20, 31, 1),
+                                                color: Color.fromRGBO(58, 152, 185),
                                                 width: 2.0)),
                                 )),
                             ),
@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                         children: [
                             Text(
                                 'password'.i18n(),
-                                style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),
+                                style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
                             ),
                         ],
                     ),
@@ -109,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                                     child: ElevatedButton(
                                         child: Text('login'.i18n(),
                                             style: TextStyle(
-                                                color: Color.fromARGB(255,0,0,0))),
+                                                color: Color.fromRGBO(58, 152, 185))),
                                         onPressed: () => {
                                             loginUseCase
                                                 .login(loginTextFieldController.text,

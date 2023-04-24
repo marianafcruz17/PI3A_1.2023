@@ -46,7 +46,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                             children: [
                                 Text(
                                     "E-mail:",
-                                    style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 1, 1, 1)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
                                 ),
                             ],
                         ),
@@ -137,7 +137,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                                                     })
                                                 },
                                             style: ElevatedButton.styleFrom(
-                                                primary: Color.fromRGBO(240, 176, 51, 14),
+                                                primary: Color.fromRGBO(58, 152, 185),
                                             )),
                                         height: 40),
 
