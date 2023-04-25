@@ -1,7 +1,7 @@
 {
     "app_name" : "Marmita Social",
 
-    "username" : "Usuário",
+    "user" : "Usuário",
     "username_hint" : "Informe o nome do seu usuário",
     "password" : "Senha",
     "password_hint" : "Informe a sua senha",
@@ -22,8 +22,10 @@
     "sub_text.3": "Conectar pessoas em situação de vulnerabilidade social/econômica com restaurantes parceiros, diminuindo o desperdicío de alimentos e ajudando pessoas necessitadas.",
 
     "onboars_button": "Começar",
-    "user": "Usuario",
     "name": "Nome",
+    "allergy": "Alergia",
+    "illness": "Doença",
+    "food_option": "Opção alimentar",
     "birth": "Data de nascimento",
     "confirm_password": "Confirmar senha",
     "register": "Cadastrar",
