@@ -384,6 +384,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                                         birthTextFieldController.text,
                                                         passwordTextFieldController.text,
                                                         confirmPasswordTextFieldController.text,
+                                                        allergyTextFieldController.text,
+                                                        illnessTextFieldController.text,
+                                                        foodOptionTextFieldController.text
                                                     )
                                                     .then((msg) {
                                                         showDialog(

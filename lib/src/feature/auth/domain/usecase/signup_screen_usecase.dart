@@ -150,8 +150,8 @@ class SignupUseCase {
             return [true];
         }
 
-    Future<User> signup(String username, String name, String email, String birth,
-        String password, String confirmPassword) {
+    Future<SignupUser> signup(String username, String name, String email, String allergy, String illness,
+                        String foodOption, String birth, String password, String confirmPassword) {
             var respValidateAllFields = validateAllFields(
                 username, name, email, birth, password, confirmPassword);
             
@@ -160,7 +160,7 @@ class SignupUseCase {
                 return Future.error(msg);
             } else {
                 return repository
-                    .signup(User(username, email, birth, password, confirmPassword));
+                    .signup(SignupUser(username, birth, allergy, illness, foodOption, email,password, confirmPassword));
             }
         }
 }
