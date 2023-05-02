@@ -1,7 +1,7 @@
 {
     "app_name" : "Marmita Social",
-    
-    "username" : "Usuário",
+
+    "user" : "Usuário",
     "username_hint" : "Informe o nome do seu usuário",
     "password" : "Senha",
     "password_hint" : "Informe a sua senha",
@@ -10,5 +10,32 @@
     "username_required" : "O usuário é obrigatório",
     "password_required" : "A senha é obrigatória",
     "divider_text" : "ou",
-    "signup" : "Cadastrar"
+    "signup" : "Cadastrar",
+    
+    "username_true": "Usuário logado com sucesso!",
+    "username_false": "Erro ao fazer o login",
+    
+    "text_ondoard.1": "Ajude de onde quiser",
+    "sub_text.1": "Ajude pessoas mais necessitadas quando e onde quiser, tendo acesso sempre que necessário por meio do chat.",    
+    "sub_text.2": "O chatbot realiza tira as dúvidas referente ao auxílio de restaurantes parceiros com pessoas em situação de vulnerabilidade social/econômica.",
+    "text_ondoard.3": "Ajudar pessoas necessitadas por meio de conexão com restaurantes parceiros",
+    "sub_text.3": "Conectar pessoas em situação de vulnerabilidade social/econômica com restaurantes parceiros, diminuindo o desperdicío de alimentos e ajudando pessoas necessitadas.",
+
+    "onboars_button": "Começar",
+    "name": "Nome",
+    "allergy": "Alergia",
+    "illness": "Doença",
+    "food_option": "Opção alimentar",
+    "birth": "Data de nascimento",
+    "confirm_password": "Confirmar senha",
+    "register": "Cadastrar",
+    "register_True": "Usuário cadastrado com sucesso!",
+    "register_False": "Erro ao fazer o cadastro",
+    "date": "Hoje",
+    "hint_Mess": "Insira a mensagem...",
+    "confirm": "Confirmar",
+    "new_Pass": "A nova senha foi enviada para o seu email!",
+    "new_Pass_False": "Erro ao resetar a senha.",
+    "food": "Alimento",
+    "quantity": "Quantidade"    
 }
