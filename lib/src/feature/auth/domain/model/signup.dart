@@ -11,7 +11,6 @@ class User {
     final String email;
     final String password;
     final String? token;
-    final String birth;
     final String confirmPassword;
 
     factory User.fromJson(Map<String, dynamic> json) => User(json['username'],

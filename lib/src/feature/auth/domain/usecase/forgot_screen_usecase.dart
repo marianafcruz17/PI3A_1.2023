@@ -1,7 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
-import 'package:marmita_social/src/Features/auth/data/repository/forgot_screen_repository.dart';
 
+import '../../data/repository/forgot_screen_repository.dart';
+import '../model/forgot.dart';
+import '../model/forgot.dart';
 import '../model/forgot.dart';
 import '../repository/forgot_screen_interface.dart';
 
@@ -23,12 +25,14 @@ class ForgotUseCase {
         }
     }
 
-    Future<User> forgot(String email) {
+  forgot(String text) {}
+
+    /*Future<Forgot> forgot(String email) {
         if (!validateEmail(email)[0]) {
             final msg = validateEmail(email)[1];
             return Future.error(msg);
         } else {
-            return repository.forgot(User(email));
+            return repository.forgot(Forgot(email));
         }
-    }
+    }*/
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/features/auth/domain/usecase/forgot_screen_usecase.dart';
+import 'package:localization/localization.dart';
+import 'package:marmita_social/src/feature/auth/domain/usecase/forgot_screen_usecase.dart';
 import 'login_page.dart';
 
 class ForgotScreen extends StatefulWidget {
@@ -46,7 +47,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                             children: [
                                 Text(
                                     "E-mail:",
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -137,7 +138,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                                                     })
                                                 },
                                             style: ElevatedButton.styleFrom(
-                                                primary: Color.fromRGBO(58, 152, 185),
+                                                primary: Color.fromRGBO(58, 152, 185,1),
                                             )),
                                         height: 40),
 

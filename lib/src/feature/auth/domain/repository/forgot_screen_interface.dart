@@ -1,5 +1,6 @@
+import '../../data/dto/forgot_dto.dart';
 import '../model/forgot.dart';
 
 abstract class IForgot {
-    Future<User> forgot(User user);
+    Future<ForgotDto> forgot(ForgotDto user);
 }

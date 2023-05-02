@@ -5,8 +5,8 @@ import '../dto/forgot_dto.dart';
 
 class ForgotScreenRepository implements IForgot {
     @override
-    Future<User> forgot(User user) async {
-        final dto = UserDto.fromDomain(user);
+    Future<ForgotDto> forgot(Forgot user) async {
+        final dto = ForgotDto.fromDomain(user);
         final response = await Dio().post(
             'http://10.0.2.2:3000/forgot',
             queryParameters: dto.toJson(),
@@ -14,7 +14,7 @@ class ForgotScreenRepository implements IForgot {
 
         if (response.statusCode == 200) {
             final token = response.headers.value('Authorization');
-            final domain = User(user.email, token: token);
+            final domain = forgotUser(user.email, token: token);
             return Future.value(domain);
         } else {
             throw Exception(response.headers['Message']);

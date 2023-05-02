@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
-import 'package:marmita_social/src/features/auth/domain/usecase/signup_screen_usecase.dart';
+import 'package:marmita_social/src/feature/auth/domain/usecase/signup_screen_usecase.dart';
 
 import 'login_page.dart';
 
@@ -68,7 +68,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'User'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -98,7 +98,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'name'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -128,7 +128,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'birth'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -190,7 +190,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'allergy'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -220,7 +220,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'illness'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -250,7 +250,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'food_option'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -280,7 +280,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     "E-mail:",
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -310,7 +310,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'password'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),
@@ -340,7 +340,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Text(
                                     'confirm_password'.i18n(),
-                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                    style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                                 ),
                             ],
                         ),

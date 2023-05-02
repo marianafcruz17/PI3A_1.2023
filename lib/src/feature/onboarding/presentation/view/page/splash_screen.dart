@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/features/onboarding/components/body.dart';
-import 'package:marmita_social/src/features/onboarding/components/size_config.dart';
+import 'package:marmita_social/src/feature/onboarding/components/body.dart';
+import 'package:marmita_social/src/feature/onboarding/components/size_config.dart';
 
 class SplashScreen extends StatelessWidget {
     const SplashScreen({Key? key}) : super(key: key);

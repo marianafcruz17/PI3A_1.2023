@@ -1,33 +1,26 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:marmita_social/src/features/auth/data/repository/login_screen_repository.dart';
-import 'package:marmita_social/src/features/auth/domain/usecase/login_screen_usecase.dart';
-import 'package:marmita_social/src/features/auth/presentation/view/page/home_page.dart';
-import 'package:marmita_social/src/features/onboarding/presentation/view/page/splash_screen.dart';
+import 'package:localization/localization.dart';
+import 'package:marmita_social/src/feature/auth/domain/usecase/login_screen_usecase.dart';
+import 'package:marmita_social/src/feature/onboarding/presentation/view/page/splash_screen.dart';
 
-import 'app_module.dart';
-import 'app_widget.dart';
-
-import '../../../domain/model/user.dart';
-import 'forgot_page.dart';
 //import 'signup_page.dart';
 
 class LoginScreen extends StatelessWidget {
     late ColorScheme _colors;
-    late Theme Data _theme;
+    late Theme Data_theme;
 
     final loginTextFieldController = TextEditingController();
     final passwordTextFieldController = TextEditingController();
     final loginUseCase = LoginUseCase();
+
+  LoginScreen({super.key});
 
     @override
     Widget build(BuildContext context){
         return Scaffold(
             appBar: AppBar(title: const Text("Login")),
             body: Container(
-                paddind: EdgeInsets.only(left: 40, rght: 40),
+                padding: EdgeInsets.only(left: 40, right: 40),
                 child: ListView(children: <Widget>[
                     Padding(padding: EdgeInsets.only(bottom: 40)),
                     Row(
@@ -47,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                         children: [
                             Text(
                                 'username'.i18n(),
-                                style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)),
                             ),
                         ],
                     ),
@@ -64,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                                         border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(20.0),
                                             borderSide: BorderSide(
-                                                color: Color.fromRGBO(58, 152, 185),
+                                                color: Color.fromRGBO(58, 152, 185,1),
                                                 width: 2.0)),
                                 )),
                             ),
@@ -77,7 +70,8 @@ class LoginScreen extends StatelessWidget {
                         children: [
                             Text(
                                 'password'.i18n(),
-                                style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185)),
+                                style: TextStyle(fontSize: 16, color: Color.fromRGBO(58, 152, 185,1)
+                                ),
                             ),
                         ],
                     ),
@@ -109,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                                     child: ElevatedButton(
                                         child: Text('login'.i18n(),
                                             style: TextStyle(
-                                                color: Color.fromRGBO(58, 152, 185))),
+                                                color: Color.fromRGBO(58, 152, 185,1))),
                                         onPressed: () => {
                                             loginUseCase
                                                 .login(loginTextFieldController.text,
@@ -187,6 +181,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                 ])
             )
-        )
+        );
     }
 }

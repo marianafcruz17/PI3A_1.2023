@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/features/onboarding/components/size_config.dart';
+import 'package:marmita_social/src/feature/onboarding/components/size_config.dart';
 
 class DefaultButton extends StatelessWidget {
     const DefaultButton({

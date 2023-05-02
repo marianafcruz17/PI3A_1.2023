@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/features/auth/presentation/view/page/home_page.dart';
-import 'package:marmita_social/src/features/onboarding/components/default_button.dart.dart';
-import 'package:marmita_social/src/features/onboarding/components/splash_content.dart';
+import 'package:localization/localization.dart';
+import 'package:marmita_social/src/feature/onboarding/components/default_button.dart';
+import 'package:marmita_social/src/feature/onboarding/components/splash_content.dart';
+import 'package:marmita_social/src/feature/auth/presentation/view/page/home_page.dart';
+import 'package:marmita_social/src/feature/onboarding/components/default_button.dart';
+import 'package:marmita_social/src/feature/onboarding/components/splash_content.dart';
+
+import '../../auth/presentation/view/page/home_page.dart';
 
 class Body extends StatefulWidget {
     const Body({Key? key}) : super(key: key);

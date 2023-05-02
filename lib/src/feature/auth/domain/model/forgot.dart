@@ -1,9 +1,9 @@
-class User {
-    const User(this.email, {this.token});
+class Forgot {
+    const Forgot(this.email, {this.token});
     
     final String email;
     final String? token;
 
-    factory User.fromJson(Map<String, dynamic> json) =>
-        User(json['email'], token: json['token']);
+    factory Forgot.fromJson(Map<String, dynamic> json) =>
+        Forgot(json['email'], token: json['token']);
 }

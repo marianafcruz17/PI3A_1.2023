@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
-import 'package:marmita_social/src/Features/auth/data/repository/signup_screen_repository.dart';
+import 'package:marmita_social/src/Feature/auth/data/repository/signup_screen_repository.dart';
 
 import '../model/signup.dart';
 import '../repository/signup_screen_interface.dart';
