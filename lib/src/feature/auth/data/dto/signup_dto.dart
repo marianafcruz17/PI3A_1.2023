@@ -1,5 +1,4 @@
 import 'package:marmita_social/src/Feature/auth/domain/model/signup.dart';
-import 'package:marmita_social/src/feature/auth/domain/model/signup.dart';
 
 class SignUpDto {
      const SignUpDto(this.username, this.email, this.birth, this.password,

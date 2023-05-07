@@ -11,6 +11,7 @@ void main() {
     ModularApp(module: AppModule(), child: AppWidget())
   );
 }
+
 /*
 class MyApp extends StatelessWidget {
   const MyApp({key}) : super(key: key);
@@ -32,6 +33,5 @@ class MyApp extends StatelessWidget {
       
       home: LoginScreen());
   }
-}
+}*/
 
-*/

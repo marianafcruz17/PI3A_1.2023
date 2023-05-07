@@ -1,11 +1,5 @@
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:localization/localization.dart';
-
+import 'package:marmita_social/src/feature/auth/domain/model/forgot.dart';
 import '../../data/repository/forgot_screen_repository.dart';
-import '../model/forgot.dart';
-import '../model/forgot.dart';
-import '../model/forgot.dart';
-import '../repository/forgot_screen_interface.dart';
 
 class ForgotUseCase {
     final repository = ForgotScreenRepository();
@@ -24,15 +18,13 @@ class ForgotUseCase {
             return [false, "Insira um email válido."];
         }
     }
-
-  forgot(String text) {}
-
-    /*Future<Forgot> forgot(String email) {
+    
+    Future<Forgot> forgot(String email) {
         if (!validateEmail(email)[0]) {
             final msg = validateEmail(email)[1];
             return Future.error(msg);
         } else {
             return repository.forgot(Forgot(email));
         }
-    }*/
+    }
 }

@@ -1,8 +1,5 @@
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:marmita_social/src/feature/auth/data/repository/login_screen_repository.dart';
-
 import '../model/user.dart';
-import '../repository/login_screen_interface.dart';
 
 class LoginUseCase {
     final repository = LoginScreenRepository();

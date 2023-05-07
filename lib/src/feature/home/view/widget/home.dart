@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/src/feature/home/view/widget/cardapio.dart';
+import 'package:marmita_social/src/feature/home/view/widget/cardapio.dart';
+
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});

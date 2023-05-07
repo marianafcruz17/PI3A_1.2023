@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
-import '../../domain/model/signup.dart';
+import 'package:marmita_social/src/feature/auth/data/dto/signup_dto.dart';
+import 'package:marmita_social/src/feature/auth/domain/model/signup.dart';
+
 import '../../domain/repository/signup_screen_interface.dart';
-import '../dto/signup_dto.dart';
+
 
 class SignupScreenRepository implements ISignup {
     @override

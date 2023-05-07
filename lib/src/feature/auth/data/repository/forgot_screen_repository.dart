@@ -20,4 +20,6 @@ class ForgotScreenRepository implements IForgot {
             throw Exception(response.headers['Message']);
         }
     }
+    
+      forgotUser(String email, {String? token}) {}
 }

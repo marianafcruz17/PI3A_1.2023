@@ -1,10 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:localization/localization.dart';
-import 'package:marmita_social/src/Feature/auth/data/repository/signup_screen_repository.dart';
-
+import 'package:marmita_social/src/feature/auth/data/repository/signup_screen_repository.dart';
 import '../model/signup.dart';
-import '../repository/signup_screen_interface.dart';
 
 class SignupUseCase {
     final repository = SignupScreenRepository();
@@ -160,7 +155,7 @@ class SignupUseCase {
                 return Future.error(msg);
             } else {
                 return repository
-                    .signup(SignupUser(username, birth, allergy, illness, foodOption, email,password, confirmPassword));
+                    .signup(SignupUser(username, name ,  email, birth, allergy, illness, foodOption, password));
             }
         }
 }

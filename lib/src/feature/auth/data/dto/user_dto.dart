@@ -13,5 +13,5 @@ class UserDto {
     factory UserDto.fromJson(Map<String, dynamic> json) =>
         UserDto(json['username'], json['password']);
 
-    Map<String, dynamic> toJson() => {'username': username, 'password': password};
+    Map<String, dynamic> toJson() => {'login': username, 'password': password};
 }

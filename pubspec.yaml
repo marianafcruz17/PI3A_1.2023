@@ -24,6 +24,8 @@ dependencies:
   flutter_svg_provider: ^1.0.3
   flutter_triple: ^1.2.7+4
   mask_text_input_formatter: ^2.4.0
+  smooth_page_indicator: ^1.1.0
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:
