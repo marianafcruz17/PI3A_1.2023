@@ -22,11 +22,11 @@ class _SignupScreenState extends State<SignupScreen> {
 
     var birthTextFieldController = TextEditingController();
         
-    var allergyTextFieldController = TextEditingController();
+    var cepTextFieldController = TextEditingController();
     
-    var illnessTextFieldController = TextEditingController();
+    var intoleranciaTextFieldController = TextEditingController();
 
-    var foodOptionTextFieldController = TextEditingController();
+    var restricaoOptionTextFieldController = TextEditingController();
 
     var emailTextFieldController = TextEditingController();
 
@@ -200,7 +200,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Flexible(
                                     child: TextField(
-                                        controller: allergyTextFieldController,
+                                        controller: cepTextFieldController,
                                         textAlignVertical: TextAlignVertical.center,
                                         style: TextStyle(fontSize: 16),
                                         decoration: InputDecoration(
@@ -230,7 +230,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Flexible(
                                     child: TextField(
-                                        controller: illnessTextFieldController,
+                                        controller: intoleranciaTextFieldController,
                                         textAlignVertical: TextAlignVertical.center,
                                         style: TextStyle(fontSize: 16),
                                         decoration: InputDecoration(
@@ -260,7 +260,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             children: [
                                 Flexible(
                                     child: TextField(
-                                        controller: foodOptionTextFieldController,
+                                        controller: restricaoOptionTextFieldController,
                                         textAlignVertical: TextAlignVertical.center,
                                         style: TextStyle(fontSize: 16),
                                         decoration: InputDecoration(
@@ -384,9 +384,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                                         birthTextFieldController.text,
                                                         passwordTextFieldController.text,
                                                         confirmPasswordTextFieldController.text,
-                                                        allergyTextFieldController.text,
-                                                        illnessTextFieldController.text,
-                                                        foodOptionTextFieldController.text
+                                                        cepTextFieldController.text,
+                                                        intoleranciaTextFieldController.text,
+                                                        restricaoOptionTextFieldController.text
                                                     )
                                                     .then((msg) {
                                                         showDialog(

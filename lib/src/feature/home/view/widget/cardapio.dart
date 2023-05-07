@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:marmita_social/src/feature/home/view/widget/account.dart';
+import 'package:marmita_social/src/feature/home/view/widget/chat.dart';
+import 'package:marmita_social/src/feature/home/view/widget/home.dart';
 
-class Cardapio extends StatelessWidget {
+import '../../../auth/presentation/view/page/signup_page.dart';
+
+class Cardapio extends StatefulWidget { //StatelessWidget
   const Cardapio({super.key});
+
+ @override
+  State<Cardapio> createState() => _HomePageState();
+  
+}
+
+class _HomePageState extends State<Cardapio> {
+  int _selectedIndex = 0;
+
+  static const List<Widget> _pages = [
+    UserHome(),
+    SignupScreen(),
+    //UserConfig(),
+    Chat(),
+    UserAccount(),
+  ];
+
+  void _navigateBottomNavBar(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +36,7 @@ class Cardapio extends StatelessWidget {
     body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         ElevatedButton(
           onPressed: () {},
           child: Row(
@@ -20,12 +47,12 @@ class Cardapio extends StatelessWidget {
                 width: 30,
                 height: 30,
               ),
-              SizedBox(width: 10),
-              Text('Cardápio 1'),
+              const SizedBox(width: 10),
+              const Text('Cardápio 1'),
             ],
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         TextButton(
           onPressed: () {},
           child: Row(
@@ -36,12 +63,12 @@ class Cardapio extends StatelessWidget {
                 width: 30,
                 height: 30,
               ),
-              SizedBox(width: 10),
-              Text('Cardápio 2'),
+              const SizedBox(width: 10),
+              const Text('Cardápio 2'),
             ],
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         TextButton(
           onPressed: () {},
           child: Row(
@@ -52,13 +79,31 @@ class Cardapio extends StatelessWidget {
                 width: 30,
                 height: 30,
               ),
-              SizedBox(width: 10),
-              Text('Cardápio 3'),
+              const SizedBox(width: 10),
+              const Text('Cardápio 3'),
             ],
           ),
         ),
       ],
     ),
+    bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromARGB(255, 58, 152, 185),
+        currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        onTap: _navigateBottomNavBar,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.speaker_notes_outlined), label: 'Search'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), label: 'Post'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle_outlined), label: 'Account'),
+        ],
+      ),
   );
   }
 }

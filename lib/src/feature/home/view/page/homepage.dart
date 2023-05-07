@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:marmita_social/src/feature/home/view/widget/chat.dart';
 import 'package:marmita_social/src/feature/home/view/widget/config.dart';
 
+import '../../../auth/presentation/view/page/signup_page.dart';
 import '../widget/account.dart';
 import '../widget/home.dart';
 
@@ -19,7 +20,8 @@ class _HomePageState extends State<HomePage> {
 
   static const List<Widget> _pages = [
     UserHome(),
-    UserConfig(),
+    SignupScreen(),
+    //UserConfig(),
     Chat(),
     UserAccount(),
   ];

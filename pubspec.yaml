@@ -49,6 +49,9 @@ flutter:
      - lib/assets/
      - lib/assets/i18n/
      - lib/assets/images/
+     - lib/assets/images/onboard1.png
+     - lib/assets/images/onboard2.png
+     - lib/assets/images/onboard3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

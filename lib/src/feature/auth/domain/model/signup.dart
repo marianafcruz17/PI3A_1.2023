@@ -1,20 +1,19 @@
 class SignupUser {
-    const SignupUser(this.username, this.birth, this.allergy, this.illness, this.foodOption, this.email, this.password,
-        this.confirmPassword,
-        {this.token});
+    const SignupUser(this.username, this.email, this.cep, this.birth, this.password,
+      this.confirmPassword, this.intoleranciaAlimentar, this.restricaoAlimentar,{this.token});
 
-    final String username;
-    final String birth;
-    final String allergy;
-    final String illness;
-    final String foodOption;
-    final String email;
-    final String password;
-    final String? token;
-    final String confirmPassword;
+  final String username;
+  final String email;
+  final String cep;
+  final String birth;
+  final String password;
+  final String confirmPassword;
+  final String intoleranciaAlimentar;
+  final String restricaoAlimentar;
+  final String? token;
 
     factory SignupUser.fromJson(Map<String, dynamic> json) => SignupUser(json['username'],
-        json['birth'], json['allergy'], json['illness'], json['foodOption'],
+        json['birth'], json['cep'], json['intoleranciaAlimentar'], json['restricaoAlimentar'],
         json['email'], json['password'], json['confirmPassword'],
         token: json['token']);
 }

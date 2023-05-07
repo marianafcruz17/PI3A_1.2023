@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import '../../domain/model/user.dart';
 import '../../domain/repository/login_screen_interface.dart';
 import '../dto/user_dto.dart';
@@ -10,9 +9,8 @@ class LoginScreenRepository implements ILogin {
     Future<User> login(User user) async {
         final dto = UserDto.fromDomain(user);
         final Map<String, dynamic> jsonData = {'key1': 'value1', 'key2': 'value2'};
-        //print(dto);
         final response = await http.post(
-          Uri.parse('localhost:8082/api/users/auth'),
+          Uri.parse('http://192.168.0.4:8082/api/users/auth'),
           headers: <String, String>{'Content-Type': 'application/json'},
           body: jsonEncode(dto.toJson()),
 
@@ -27,7 +25,7 @@ class LoginScreenRepository implements ILogin {
             final domain = User(user.username, user.password);
             return Future.value(domain);
         } else {
-            final msg = "Deu ruim tio";
+            final msg = "Usuário Incorreto ou Inexistente";
             return Future.error("$msg");
         }
     }
