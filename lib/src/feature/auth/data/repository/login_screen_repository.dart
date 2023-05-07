@@ -10,7 +10,7 @@ class LoginScreenRepository implements ILogin {
         final dto = UserDto.fromDomain(user);
         final Map<String, dynamic> jsonData = {'key1': 'value1', 'key2': 'value2'};
         final response = await http.post(
-          Uri.parse('http://192.168.0.4:8082/api/users/auth'),
+          Uri.parse('http://localhost:8082/api/users/auth'),
           headers: <String, String>{'Content-Type': 'application/json'},
           body: jsonEncode(dto.toJson()),
 

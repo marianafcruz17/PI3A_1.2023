@@ -1,4 +1,4 @@
-import 'package:marmita_social/src/Feature/auth/domain/model/signup.dart';
+import 'package:marmita_social/src/feature/auth/domain/model/signup.dart';
 
 class SignUpDto {
      const SignUpDto(this.username, this.email, this.cep, this.birth, this.password,
@@ -10,18 +10,18 @@ class SignUpDto {
   final String birth;
   final String password;
   final String confirmPassword;
-  final String intoleranciaAlimentar;
-  final String restricaoAlimentar;
+  final List<String> intoleranciaAlimentar;
+  final List<String> restricaoAlimentar;
   final String? token;
 
   factory SignUpDto.fromDomain(SignupUser user) {
     return SignUpDto(
         user.username,
         user.email,
+        user.cep,
         user.birth,
         user.password,
         user.confirmPassword,
-        user.cep,
         user.intoleranciaAlimentar,
         user.restricaoAlimentar,
         user.token);
@@ -30,10 +30,10 @@ class SignUpDto {
   factory SignUpDto.fromJson(Map<String, dynamic> json) => SignUpDto(
         json['username'],
         json['email'],
+        json['cep'],
         json['birth'],
         json['password'],
         json['confirmPassword'],
-        json['cep'],
         json['intoleranciaAlimentar'],
         json['restricaoAlimentar'],
         json['token']

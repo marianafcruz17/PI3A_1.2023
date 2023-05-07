@@ -81,7 +81,7 @@ class SignupUseCase {
 
         RegExp validPasswordMinLength = RegExp(r"^.{8,}");
 
-        if (!validPasswordUpperCase.hasMatch(password)) {
+        /*if (!validPasswordUpperCase.hasMatch(password)) {
             return [false, 'A senha precisa ter pelo menos uma letra maiúscula.'];
         }
 
@@ -100,7 +100,7 @@ class SignupUseCase {
         if (!validPasswordMinLength.hasMatch(password)) {
             return [false, 'A senha precisa ter no mínimo 8 caracteres.'];
         }
-
+*/
         return [true];
     }
 
@@ -116,15 +116,15 @@ class SignupUseCase {
         return [true];
     }
 
-    List validateAllFields(String username, String name, String email,
+    List validateAllFields(String username,/* String name,*/ String email,
         String birth, String password, String confirmPassword) {
             if (!validateUsername(username)[0]) {
                 return validateUsername(username);
             }
 
-            if (!validateName(name)[0]) {
+            /* if (!validateName(name)[0]) {
                 return validateName(name);
-            }
+            } */
 
             if (!validateEmail(email)[0]) {
                 return validateEmail(email);
@@ -145,17 +145,16 @@ class SignupUseCase {
             return [true];
         }
 
-    Future<SignupUser> signup(String username, String name, String email, String allergy, String illness,
-                        String foodOption, String birth, String password, String confirmPassword) {
+    Future<SignupUser> signup(String username, /*String name,*/ String email, String cep,  String birth, String password,  String confirmPassword ,List<String> intoleranciaAlimentar, List<String> restricaoAlimentar ) {
             var respValidateAllFields = validateAllFields(
-                username, name, email, birth, password, confirmPassword);
+                username,/* name,*/ email, birth, password, confirmPassword );
             
             if (!respValidateAllFields[0]) {
                 final msg = respValidateAllFields[1];
                 return Future.error(msg);
             } else {
                 return repository
-                    .signup(SignupUser(username, name ,  email, birth, allergy, illness, foodOption, password));
+                    .signup(SignupUser(username, /*name ,*/  email,cep, birth, password ,confirmPassword, intoleranciaAlimentar, restricaoAlimentar ));
             }
         }
 }

@@ -26,6 +26,8 @@
     "allergy": "Alergia",
     "illness": "Doença",
     "food_option": "Opção alimentar",
+    "intolerancia": "Intolerância Alimentar",
+    "restricao": "Restrição Alimentar",
     "birth": "Data de nascimento",
     "confirm_password": "Confirmar senha",
     "register": "Cadastrar",
