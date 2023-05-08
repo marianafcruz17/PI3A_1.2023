@@ -3,7 +3,8 @@ import 'package:localization/localization.dart';
 import 'package:marmita_social/src/feature/onboarding/components/default_button.dart';
 import 'package:marmita_social/src/feature/onboarding/components/splash_content.dart';
 
-import '../../home/view/page/homepage.dart';
+// import '../../home/view/page/homepage.dart';
+import '../../home/view/page/homepage.component.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);

@@ -5,15 +5,15 @@ import 'package:marmita_social/src/feature/home/view/widget/home.dart';
 
 import '../../../auth/presentation/view/page/signup_page.dart';
 
-class Cardapio extends StatefulWidget {
+class Restaurantes extends StatefulWidget {
   //StatelessWidget
-  const Cardapio({super.key});
+  const Restaurantes({super.key});
 
   @override
-  State<Cardapio> createState() => _HomePageState();
+  State<Restaurantes> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<Cardapio> {
+class _HomePageState extends State<Restaurantes> {
   int _selectedIndex = 0;
 
   static const List<Widget> _pages = [
@@ -36,99 +36,99 @@ class _HomePageState extends State<Cardapio> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           TextButton(
             onPressed: () {},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'lib/assets/images/alimentos.png',
+                  'lib/assets/images/localização.png',
                   width: 30,
                   height: 30,
                 ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 1'),
+                const SizedBox(width: 15),
+                const Text('Restaurante 1'),
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           TextButton(
             onPressed: () {},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'lib/assets/images/alimentos.png',
+                  'lib/assets/images/localização.png',
                   width: 30,
                   height: 30,
                 ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 2'),
+                const SizedBox(width: 15),
+                const Text('Restaurante 2'),
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           TextButton(
             onPressed: () {},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'lib/assets/images/alimentos.png',
+                  'lib/assets/images/localização.png',
                   width: 30,
                   height: 30,
                 ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 3'),
+                const SizedBox(width: 15),
+                const Text('Restaurante 3'),
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           TextButton(
             onPressed: () {},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'lib/assets/images/alimentos.png',
+                  'lib/assets/images/localização.png',
                   width: 30,
                   height: 30,
                 ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 4'),
+                const SizedBox(width: 15),
+                const Text('Restaurante 4'),
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           TextButton(
             onPressed: () {},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'lib/assets/images/alimentos.png',
+                  'lib/assets/images/localização.png',
                   width: 30,
                   height: 30,
                 ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 5'),
+                const SizedBox(width: 15),
+                const Text('Restaurante 5'),
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           TextButton(
             onPressed: () {},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'lib/assets/images/alimentos.png',
+                  'lib/assets/images/localização.png',
                   width: 30,
                   height: 30,
                 ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 6'),
+                const SizedBox(width: 15),
+                const Text('Restaurante 6'),
               ],
             ),
           ),

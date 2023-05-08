@@ -1,26 +1,22 @@
 {
-    "app_name" : "Marmita Social",
-
-    "user" : "Usuário",
-    "username_hint" : "Informe o nome do seu usuário",
-    "password" : "Senha",
-    "password_hint" : "Informe a sua senha",
-    "login" : "Login",
-    "forgot_password" : "Esqueci a senha!",
-    "username_required" : "O usuário é obrigatório",
-    "password_required" : "A senha é obrigatória",
-    "divider_text" : "ou",
-    "signup" : "Cadastrar",
-    
+    "app_name": "Marmita Social",
+    "user": "Usuário",
+    "username_hint": "Informe o nome do seu usuário",
+    "password": "Senha",
+    "password_hint": "Informe a sua senha",
+    "login": "Login",
+    "forgot_password": "Esqueci a senha!",
+    "username_required": "O usuário é obrigatório",
+    "password_required": "A senha é obrigatória",
+    "divider_text": "ou",
+    "signup": "Cadastrar",
     "username_true": "Usuário logado com sucesso!",
     "username_false": "Erro ao fazer o login",
-    
     "text_onboard.1": "Ajude de onde quiser",
-    "sub_text.1": "Ajude pessoas mais necessitadas quando e onde quiser, tendo acesso sempre que necessário por meio do chat.",    
+    "sub_text.1": "Ajude pessoas mais necessitadas quando e onde quiser, tendo acesso sempre que necessário por meio do chat.",
     "sub_text.2": "O chatbot realiza tira as dúvidas referente ao auxílio de restaurantes parceiros com pessoas em situação de vulnerabilidade social/econômica.",
     "text_onboard.3": "Ajudar pessoas necessitadas por meio de conexão com restaurantes parceiros",
     "sub_text.3": "Conectar pessoas em situação de vulnerabilidade social/econômica com restaurantes parceiros, diminuindo o desperdicío de alimentos e ajudando pessoas necessitadas.",
-
     "onboars_button": "Começar",
     "name": "Nome",
     "allergy": "Alergia",
@@ -39,5 +35,6 @@
     "new_Pass": "A nova senha foi enviada para o seu email!",
     "new_Pass_False": "Erro ao resetar a senha.",
     "food": "Alimento",
-    "quantity": "Quantidade"    
+    "quantity": "Quantidade",
+    "in_development": "Em Desenvolvimento."
 }

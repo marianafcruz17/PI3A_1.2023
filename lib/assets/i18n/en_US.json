@@ -1,22 +1,19 @@
 {
-    "app_name" : "Lunchbox Social",
-
-    "username" : "User",
+    "app_name": "Lunchbox Social",
+    "username": "User",
     "username_hint": "Type your username",
     "password": "Password",
     "password_hint": "Type your password",
-    "login" : "Login",
-    "forgot_password" : "Forgot password!",
-    "username_required" : "Username is required!",
-    "password_required" : "Password is required!",
-    "divider_text" : "or",
-    "signup" : "Sign Up",
-
+    "login": "Login",
+    "forgot_password": "Forgot password!",
+    "username_required": "Username is required!",
+    "password_required": "Password is required!",
+    "divider_text": "or",
+    "signup": "Sign Up",
     "username_true": "User logged successfully!",
     "username_false": "login Error",
-
     "text_onboard.1": "Help wherever you want",
-    "sub_text.1": "Help people in need whenever and wherever you want, having access whenever necessary through chat.",    
+    "sub_text.1": "Help people in need whenever and wherever you want, having access whenever necessary through chat.",
     "sub_text.2": "The chatbot answers questions regarding the assistance of partner restaurants with people in socially/economically vulnerable situations.",
     "text_onboard.3": "Help people in need by connecting with partner restaurants",
     "sub_text.3": "Connecting people in situations of social/economic vulnerability with partner restaurants, reducing food waste and helping people in need",
@@ -39,5 +36,6 @@
     "new_Pass": "The new password was sent to your e-mail!",
     "new_Pass_False": "Password reset error.",
     "food": "Food",
-    "quantity": "Quantity"    
+    "quantity": "Quantity",
+    "in_development": "In Development."
 }
