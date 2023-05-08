@@ -1,6 +1,6 @@
 # marmita_social
 
-A new Flutter project.
+Para criar usuários ou fazer autenticações, necessário baixar api do seguinte repositorio: <a href="https://github.com/Makeavel/jwtSecurity/tree/marmitaSocial">JWTSecurity</a>
 
 ## Getting Started
 
