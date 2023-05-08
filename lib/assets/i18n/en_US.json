@@ -15,10 +15,10 @@
     "username_true": "User logged successfully!",
     "username_false": "login Error",
 
-    "text_ondoard.1": "Help wherever you want",
+    "text_onboard.1": "Help wherever you want",
     "sub_text.1": "Help people in need whenever and wherever you want, having access whenever necessary through chat.",    
     "sub_text.2": "The chatbot answers questions regarding the assistance of partner restaurants with people in socially/economically vulnerable situations.",
-    "text_ondoard.3": "Help people in need by connecting with partner restaurants",
+    "text_onboard.3": "Help people in need by connecting with partner restaurants",
     "sub_text.3": "Connecting people in situations of social/economic vulnerability with partner restaurants, reducing food waste and helping people in need",
     "onboars_button": "Start",
     "user": "User",
