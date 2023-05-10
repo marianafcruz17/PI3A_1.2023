@@ -1,0 +1,157 @@
+\documentclass[conference,compsoc]{IEEEtran}
+
+\usepackage[brazilian]{babel}
+\selectlanguage{portuguese}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Marmita Social}
+
+\author{
+    \IEEEauthorblockN{Arthur Rocha Caldeira}
+    \IEEEauthorblockA{Ciência da Computação\\
+    Inst. de Educação Superior de Brasília\\
+    Brasília, Brasil\\
+    Email: arthur.caldeira@iesb.edu.br}
+
+    \and
+    
+    \IEEEauthorblockN{Mariana Cruz}
+    \IEEEauthorblockA{Ciência da Computação\\
+    Inst. de Educação Superior de Brasília\\
+    Brasília, Brasil\\
+    Email: mariana.cruz@iesb.edu.br}
+    
+    \and
+    
+    \IEEEauthorblockN{Paulo Henrique Gerivazo Abrantes}
+    \IEEEauthorblockA{Ciência da Computação\\
+    Inst. de Educação Superior de Brasília\\
+    Brasília, Brasil\\
+    Email: paulohgabrantes@gmail.com}
+    
+    \and
+    
+    \IEEEauthorblockN{Pietro Nazar Neiva}
+    \IEEEauthorblockA{Ciência da Computação\\
+    Inst. de Educação Superior de Brasília\\
+    Brasília, Brasil\\
+    Email:pietro.neiva@iesb.edu.br }
+}
+
+
+\setlength {\marginparwidth }{2cm}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+O Brasil passa por uma crise de fome há décadas que vem sendo negligenciada pelo governo e pelas camadas mais ricas da sociedade. Dessa forma, há uma contradição entre o enrome volume de alimento desperdiçado por restaurantes e o cenário de insegurança alimentar que muitos brasileiros experimentam. Assim, propomos o aplicativo de celular "Food Express", que permite restaurantes anunciarem marmitas, com o excesso de comida, e o local e horário em que serão vendidas, para que os usuários cadastrados possam se dirigir até eles. Finalmente, o app atua no Distrito Federal (DF) e usa uma rede neural para indicar pontos de venda para os usuários, mas diferente de trabalhos similares, que apenas se baseiam na localização geográfica, o nosso também leva em conta as intolerâncias e preferências alimentares individuais.
+\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+\section{Introdução}
+
+
+Nesse contexto, a maior parte dos moradores do DF apresentam dificuldade em conseguir comida todos os dias, conforme o inquérito da Rede PENSSAN (2022, p. 34) \cite{Rede PENSSAN}, que mostra que 61,5\% da população do Distrito Federal apresenta algum grau de insegurança alimentar. Mesmo assim, o Brasil é um país que desperdiça muito alimento, de acordo com o relatório da UNEP (2021, pp. 38-39) \cite{UNEP}, todos os anos 60kg de comida por pessoa é jogada no lixo.
+
+Portanto, para solucionar essa realidade distópica, foi criado o "Food Express", em que restaurantes, em vez de jogar o excesso de comida no lixo, monta e vende marmitas a pessoas interessadas. Dessa maneira, o restaurante fica encarregado de definir o local, horário e preço, juntamente com os detalhes dos ingredientes presentes, ao passo que o usuário, uma vez cadastrado, pode consultar esses dados.
+
+A distribuição de comida por restaurantes não é uma ideia nova, pois existem artigos que abordam o desenvolvimento de apps de mesma funcionalidade. Este é o caso do trabalho desenvolvido por Shinkar et al. (2021) \cite{SHINKAR}, em que se adequa a realidade da Índia para fornecer um aplicativo que liga doadores e beneficiários. Ainda nesse viés, uma abordagem semelhante é detalhada no artigo de Sowjanya e Gagan (2022) \cite{SOWJANYA}, que também se baseia no cenário indiano e atenuar a fome no país.
+
+Por conseguinte, é possível traçar um paralelo entre os trabalhos e verificar que as restrições e preferências alimentares dos indivíduos não é considerada. Noutros termos, caso a pessoa tenha intolerância alimentar a algum dos ingredientes ela corre o risco de comer e adoecer. Ademais, na situação em que um usuário não come certo grupo de alimentos por conta de crenças pessoais, ele pode ingerir essa comida sem qurer. Ou seja, há uma falha sistemática que não leva em conta a personalização do produto para cada usuário e que precisa ser corrigida afim de evitar impactos na saúde física e mental dos consumidores.
+
+Com objetivo de fechar essa lacuna, o "Food Express” faz uso de uma rede neural capaz de entender as restrições de cada usuário e indicar os pontos de venda que as satisfazem. Além disso, é levado em conta também a localização geográfica do indivíduo, de forma que a acessibilidade do local também seja fator determinante.
+
+\section{ Metodologia }
+
+\subsection{Aplicativo}
+
+\subsection{Dataset de Usuários}
+Foi concebida uma base de dados fictícia, que conta com 10 mil moradores do Distrito Federal, em que cada usuário possui os seguintes atributos:
+
+\begin{itemize}
+  \item Nome
+  \item Data de Nascimento
+  \item Intolerância à Lactose
+  \item Intolerância ao Glúten
+  \item Vegetariano
+  \item Não Come Porco
+  \item CEP
+  \item E-mail
+  \item Senha
+\end{itemize}
+
+A seguir e descrito como cada um dos campos foi gerado.
+
+\subsubsection{Nome}
+Foi usado o pacote "Faker" do Python para criar nomes aleatórios em português.
+
+\subsubsection{Data de Nascimento}
+É uma data aleatória de modo que o usuário tenha entre 18 e 80 anos de idade.
+
+\subsubsection{Intolerância à Lactose}
+De acordo com \cite{LACTOSE}, 70\% da população brasileira sofre dessa condição, por isso, a probabilidade de um usuário apresentar essa condição é de 70\%.
+
+\subsubsection{Intolerância ao Glúten}
+Já consoante a \cite{GLUTEN}, 0,17\% da população brasileira apresenta essa intolerância, então a probabilidade de um usuário também apresentar é de 0,17%.
+
+\subsubsection{Vegetariano}
+Aqui, a probabilidade de ser adepto é de 14\%, pois reflete a proporção da população brasileira, de acordo com \cite{VEGETARIANO}.
+
+\subsubsection{Não Come Porco}
+Referente a religão em dados obtidos do IBGE.
+
+\subsubsection{CEP}
+Proporcional a população de cada Região Administrativa do DF.
+
+\subsubsection{E-mail}
+Obtido pelo primeiro nome e segundo nome da pessoa, com o acréscimo de um provedor de e-mail aleatório.
+
+\subsubsection{Senha}
+É o nome da pessoa com a adição dos caracteres de "1!" ao final.
+
+
+\section{Resultados}
+
+\section{Discussão}
+
+\section{Conclusão}
+
+\begin{thebibliography}{00}
+
+\bibitem{GLUTEN}
+Associação de Celíacos do Brasil. (2016). Portal Bonde. Recuperado de: \url{https://www.bonde.com.br/saude/nutricao/intolerancia-ao-gluten-acomete-um-em-cada-600-brasileiros-426036.html}
+
+\bibitem{LACTOSE}
+STEINWURZ, F.; DINIZ, C. (2012). Bem Estar - G1. Recuperado de: \url{https://g1.globo.com/bemestar/noticia/2012/02/intolerancia-lactose-atinge-ate-70-dos-adultos-brasileiros.html}
+
+\bibitem{PAPARGYROPOULOU}
+PAPARGYROPOULOU, E. et al. (2014). The food waste hierarchy as a framework for the management of food surplus and food waste. Journal of Cleaner Production, 76, 106-115. Recuperado de: \url{https://doi.org/10.1016/j.jclepro.2014.04.020}
+
+\bibitem{Rede PENSSAN}
+Rede PENSSAN. (2022). Inquérito Nacional sobre Insegurança Alimentar no Contexto da Pandemia da Covid-19 no Brasil. Página 34. Recuperado de: \url{https://www12.senado.leg.br/noticias/arquivos/2022/10/14/olheestados-diagramacao-v4-r01-1-14-09-2022.pdf}
+
+\bibitem{SHINKAR}
+SHINKAR, D. et al. (2021). Waste Food Donation Using Mobile Application. International Research Journal of Innovations in Engineering and Technology (IRJIET), 5(6). Recuperado de: \url{https://irjiet.com/common_src/article_file/1624856442_81547fde29_5_irjiet.pdf}
+
+\bibitem{SOWJANYA}
+SOWJANYA, M.N.; GAGAN, H.M. (2022). MOBILE BASED APPROACH TO REDISTRIBUTE CONSUMABLE FOOD. International Research Journal of Modernization in Engineering Technology and Science (IRJMETS), 4(9). Recuperado de: \url{https://www.irjmets.com/uploadedfiles/paper//issue_9_september_2022/29791/final/fin_irjmets1662964555.pdf}
+
+\bibitem{UNEP}
+United Nations Environment Programme (UNEP). (2021). FOOD WASTE INDEX REPORT 2021. Páginas 38-39. Recuperado de: \url{https://catalogue.unccd.int/1679_FoodWaste.pdf}
+
+\bibitem{VEGETARIANO}
+IBOPE. (2018). Recuperado de: \url{https://www.svb.org.br/2469-pesquisa-do-ibope-aponta-crescimento-historico-no-numero-de-vegetarianos-no-brasil}
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
