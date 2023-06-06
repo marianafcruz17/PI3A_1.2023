@@ -6,7 +6,11 @@ import 'package:marmita_social/src/feature/home/view/widget/account.dart';
 import 'package:marmita_social/src/feature/home/view/widget/chat.dart';
 import 'package:marmita_social/src/feature/home/view/widget/home.dart';
 
+import 'dialogflow.dart';
+
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -27,7 +31,7 @@ class _HomePageState extends State<HomePage> {
             ),
             NavigatorPage(
               title: const Text('Search'),
-              child: const Chat(),
+              child: const DialogFlow(),
             ),
             NavigatorPage(
               title: const Text('Settings'),
