@@ -62,7 +62,7 @@ class _DialogFlow extends State<DialogFlow> {
 
   sendMessage(String text) async {
     if (text.isEmpty) {
-      print('Message is empty');
+      print('Mensagem Vazia');
     } else {
       setState(() {
         addMessage(Message(text: DialogText(text: [text])), true);

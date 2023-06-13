@@ -37,5 +37,6 @@
     "new_Pass_False": "Password reset error.",
     "food": "Food",
     "quantity": "Quantity",
-    "in_development": "In Development."
+    "in_development": "In Development.",
+    "gluten":"Gluten"
 }

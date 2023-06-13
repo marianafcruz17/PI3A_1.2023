@@ -36,48 +36,51 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SizedBox(
-        width: double.infinity,
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              flex: 2,
-              child: PageView.builder(
-                onPageChanged: (value) {
-                  setState(() {
-                    currentPage = value;
-                  });
-                },
-                itemCount: splashData.length,
-                itemBuilder: (context, index) => SplashContent(
-                  text: splashData[currentPage]['text'],
-                  sub_text: splashData[currentPage]['sub_text'],
-                  image: splashData[currentPage]["image"],
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                flex: 2,
+                child: PageView.builder(
+                  onPageChanged: (value) {
+                    setState(() {
+                      currentPage = value;
+                    });
+                  },
+                  itemCount: splashData.length,
+                  itemBuilder: (context, index) => SplashContent(
+                    text: splashData[currentPage]['text'],
+                    sub_text: splashData[currentPage]['sub_text'],
+                    image: splashData[currentPage]["image"],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Column(children: <Widget>[
-                Spacer(),
-                if (currentPage == 2)
-                  DefaultButton(
-                    text: 'onboars_button'.i18n(),
-                    press: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => HomePage()));
-                    },
+              Expanded(
+                flex: 1,
+                child: Column(children: <Widget>[
+                  Spacer(),
+                  if (currentPage == 2)
+                    DefaultButton(
+                      text: 'onboars_button'.i18n(),
+                      press: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => HomePage()));
+                      },
+                    ),
+                  Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(
+                        splashData.length, (index) => buildDot(index: index)),
                   ),
-                Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(
-                      splashData.length, (index) => buildDot(index: index)),
-                ),
-                Spacer(),
-              ]),
-            )
-          ],
+                  Spacer(),
+                ]),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -36,5 +36,6 @@
     "new_Pass_False": "Erro ao resetar a senha.",
     "food": "Alimento",
     "quantity": "Quantidade",
-    "in_development": "Em Desenvolvimento."
+    "in_development": "Em Desenvolvimento.",
+    "gluten":"Glúten"
 }

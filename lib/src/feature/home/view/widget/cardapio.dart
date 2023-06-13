@@ -4,9 +4,9 @@ import 'package:marmita_social/src/feature/home/view/widget/chat.dart';
 import 'package:marmita_social/src/feature/home/view/widget/home.dart';
 
 import '../../../auth/presentation/view/page/signup_page.dart';
+import '../page/homepage.component.dart';
 
 class Cardapio extends StatefulWidget {
-  //StatelessWidget
   const Cardapio({super.key});
 
   @override
@@ -17,9 +17,8 @@ class _HomePageState extends State<Cardapio> {
   int _selectedIndex = 0;
 
   static const List<Widget> _pages = [
-    UserHome(),
+    HomePage(),
     SignupScreen(),
-    //UserConfig(),
     Chat(),
     UserAccount(),
   ];
@@ -64,71 +63,7 @@ class _HomePageState extends State<Cardapio> {
                   height: 30,
                 ),
                 const SizedBox(width: 10),
-                const Text('Cardápio 2'),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10),
-          TextButton(
-            onPressed: () {},
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'lib/assets/images/alimentos.png',
-                  width: 30,
-                  height: 30,
-                ),
-                const SizedBox(width: 10),
                 const Text('Cardápio 3'),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10),
-          TextButton(
-            onPressed: () {},
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'lib/assets/images/alimentos.png',
-                  width: 30,
-                  height: 30,
-                ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 4'),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10),
-          TextButton(
-            onPressed: () {},
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'lib/assets/images/alimentos.png',
-                  width: 30,
-                  height: 30,
-                ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 5'),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10),
-          TextButton(
-            onPressed: () {},
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'lib/assets/images/alimentos.png',
-                  width: 30,
-                  height: 30,
-                ),
-                const SizedBox(width: 10),
-                const Text('Cardápio 6'),
               ],
             ),
           ),

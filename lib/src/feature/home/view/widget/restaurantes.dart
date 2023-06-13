@@ -19,7 +19,6 @@ class _HomePageState extends State<Restaurantes> {
   static const List<Widget> _pages = [
     UserHome(),
     SignupScreen(),
-    //UserConfig(),
     Chat(),
     UserAccount(),
   ];

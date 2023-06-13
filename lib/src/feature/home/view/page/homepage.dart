@@ -23,8 +23,6 @@ class _HomePageState extends State<HomePage> {
   static const List<Widget> _pages = [
     UserHome(),
     DialogFlow(),
-    //Chat(),
-    //UserConfig(),
     SignupScreen(),
     UserAccount(),
   ];

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:marmita_social/src/feature/auth/presentation/view/page/signup_page.dart';
 import 'package:marmita_social/src/feature/home/view/page/navigator-page.component.dart';
 import 'package:marmita_social/src/feature/home/view/widget/account.dart';
-import 'package:marmita_social/src/feature/home/view/widget/chat.dart';
 import 'package:marmita_social/src/feature/home/view/widget/home.dart';
 
 import 'dialogflow.dart';
