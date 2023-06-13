@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "newagent-wnuq",
+  "private_key_id": "614ec4d1c720496f50fb069ed821cab3881b1987",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCieu/zNBd9n/bW\nTzWwwQIKeo38SuE82xvf7kMRzHlYVNRcROw4bPu0LitxmyFLCnyE8yVxe2Py+kHb\nbspdV+LdCjtd53V5nbosYuX88da9VS3lCZ51Le0rBKodfV0xziSY79PMYE1MAEKL\nZGC4XnT9AdU6hOqMxipDiG0hRma81g+WwbcjQsHybkbaB5Bw6Tfx0kGkxu6jodn2\ntVA36YoWZfFR0NUSPK7o4oyIBXXPpgwkZu6mZyJRKNieDo0OblsIXMhrqySa8L02\nNjYzGamWtDstd7G0wWmopeY+KwmvqhShVtrj9e9vrwjauL7e1xiQQPmiUmFVSjR4\nVsHUzOKnAgMBAAECggEAAzSIpOll/eZDcMvZjnXoQTuqBGGXxY25pDZniqOC0KFv\nxQLeZBM7ozzL7O73U6sjyghKjfgLVeDmSVq1/EG+aceIufFVycM48no1o5fuZAgY\n99feO900PLEtXUKQAupYTM9iWWRG8hUJOwW3u2YFnx4Y+Oa5V8iVpIUS82FCUpRL\nEy2czPVn0FpPMA0gW1NrQ9weN65W0r+0/GvyHbwC/zDssp7087JZVxlwmXCSWuSc\n8p7oF0juTjQe6+gyDwOhnE58ZbtxnT8aEciK8/90OtbevgMLhSCknbEa71nv+iBv\nMkaZjiYgPQ4/NV25FRSEJcFlj3mk6naApdmEObZv1QKBgQDPl2a7YjenzfhTBUTQ\nwHaSafVavfpKLMwJAy2I1TqE3ZgH0UvyVNlv2GwRPUUgbbC60SR9Sy6EhpaB77ha\n5LVnl+bD4KmiMqAvo63hKOiorahzr5sK84u43Mi5NhEaxltLtMe/ZZ2adYFRtefh\nhH3ObuTN3fqDtIJjNOe6wFXpIwKBgQDIXofFnbCfF1WaIAKX/yuKlBjRsBHyXZUV\nvGWUsOg73eXtSc2st6bT+0kps2a03Z/wWco0udW5H6qi+ic1DwTU9RQoePO2N3YU\nismpyDR06/8XFXv7G5qps1UU6lu9uZqPfb5/1nVt7JWe7j5PnQb4KhjRAKoHyLJY\nCquBmwyyrQKBgQDGWTg8lNTuzfuWf7NH7o2cygc4A8uRcgomFlY8ptg6OWzZE18I\nlZAIsPZY5n0VRhmV9t1xphM1Z0+JqZ4xotO9vsMsp44Nv2eU/UTXnXnoKb2Jg+GV\nbi0znilf5kwjlCGJTZuJwjL7cYj1pOSBc1GtnAGcvpttmlz3I4bCxqGPlwKBgQCl\n43W/S831+Ui7APOEyhNPeUuPF5nUMlyDEWZ8k3bCUfXR3j+1Vpt9d9db+hb3eWG4\niW5a9tyWlzwcEMWzLQsQERQuae1EmGhfm4RY19NuVhDtGLF79Z+4DixL07g+vNLV\nKAM3LeQtLSm22oKmQViKz7eaGlWreiMFt1fFRwxdRQKBgHtazzF5vnQE7UYCp9aY\nV3fgfvVOi/pAMMKUKTOJ58F2aluxfqX3JVPWNFz6LlloIpBV4N7SoVDO/7x/yjXp\nchLDX1hBR1k/PoBcUAcjv3EJsoqiLOOeJqmltZHij91hZzimPQSZhIkr82WkJEsz\nbQfMY2o2zI85MD89P2KZi/6f\n-----END PRIVATE KEY-----\n",
+  "client_email": "marmitasocialbot@newagent-wnuq.iam.gserviceaccount.com",
+  "client_id": "111455233875486517121",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/marmitasocialbot%40newagent-wnuq.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

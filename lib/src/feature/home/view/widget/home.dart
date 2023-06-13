@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/feature/home/view/widget/cardapio.dart';
-import 'package:marmita_social/src/feature/home/view/widget/restaurantes.dart';
+
+import 'cards.dart';
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});
@@ -8,14 +8,27 @@ class UserHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
+        body: ListView.separated(
+      padding: const EdgeInsets.all(12),
+      itemCount: 10,
+      separatorBuilder: (BuildContext context, int index) {
+        return const SizedBox(height: 12);
+      },
+      itemBuilder: (context, index) {
+        return Cards(index: index);
+      },
+    ));
+  }
+}
+
+/*SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            SizedBox(
+            /*SizedBox(
               height: 230,
               width: 200,
               child: ElevatedButton(
@@ -38,7 +51,7 @@ class UserHome extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
+            ),*/
             SizedBox(
               height: 230,
               width: 200,
@@ -66,7 +79,4 @@ class UserHome extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
+      ),*/

@@ -1,3 +1,4 @@
+import 'package:dialog_flowtter/dialog_flowtter.dart';
 import 'package:flutter/material.dart';
 import 'package:marmita_social/src/feature/home/view/widget/chat.dart';
 import 'package:marmita_social/src/feature/home/view/widget/config.dart';
@@ -5,6 +6,7 @@ import 'package:marmita_social/src/feature/home/view/widget/config.dart';
 import '../../../auth/presentation/view/page/signup_page.dart';
 import '../widget/account.dart';
 import '../widget/home.dart';
+import 'dialogflow.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,10 +18,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
+  late DialogFlowtter dialogFlowtter;
+
   static const List<Widget> _pages = [
     UserHome(),
-    Chat(),
-    //UserConfig(),
+    DialogFlow(),
     SignupScreen(),
     UserAccount(),
   ];
