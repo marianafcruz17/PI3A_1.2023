@@ -15,26 +15,27 @@ class _MessagesScreenState extends State<MessagesScreen> {
     return ListView.separated(
         itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             child: Row(
               mainAxisAlignment: widget.messages[index]['isUserMessage']
                   ? MainAxisAlignment.end
                   : MainAxisAlignment.start,
               children: [
                 Container(
-                    padding: EdgeInsets.symmetric(vertical: 14, horizontal: 14),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 14, horizontal: 14),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topRight: Radius.circular(20),
+                          bottomLeft: const Radius.circular(20),
+                          topRight: const Radius.circular(20),
                           bottomRight: Radius.circular(
                               widget.messages[index]['isUserMessage'] ? 0 : 20),
                           topLeft: Radius.circular(
                               widget.messages[index]['isUserMessage'] ? 20 : 0),
                         ),
                         color: widget.messages[index]['isUserMessage']
-                            ? Color.fromARGB(255, 136, 158, 173)
-                            : Color.fromARGB(255, 72, 127, 179)
+                            ? const Color.fromARGB(255, 136, 158, 173)
+                            : const Color.fromARGB(255, 72, 127, 179)
                                 .withOpacity(0.8)),
                     constraints: BoxConstraints(maxWidth: w * 2 / 3),
                     child:
@@ -43,7 +44,8 @@ class _MessagesScreenState extends State<MessagesScreen> {
             ),
           );
         },
-        separatorBuilder: (_, i) => Padding(padding: EdgeInsets.only(top: 10)),
+        separatorBuilder: (_, i) =>
+            const Padding(padding: EdgeInsets.only(top: 10)),
         itemCount: widget.messages.length);
   }
 }

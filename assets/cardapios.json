@@ -1,0 +1,407 @@
+[
+      { 
+        "id": "1",
+        "nome": "Hambúrguer",
+        "valor": "R$ 15.99",
+        "ingredientes": ["pão", "carne", "queijo", "alface", "tomate", "molho especial"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "2",
+        "nome": "Pizza Margherita",
+        "valor": "R$ 29.99",
+        "ingredientes": ["massa de pizza", "molho de tomate", "queijo muçarela", "manjericão"],
+        "lactose": false,
+        "gluten": true,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "3",
+        "nome": "Sushi de salmão",
+        "valor": "R$ 19.99",
+        "ingredientes": ["arroz", "salmão fresco", "alga nori", "molho de soja", "wasabi"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "4",
+        "nome": "Macarrão à Bolonhesa",
+        "valor": "R$ 17.50",
+        "ingredientes": ["macarrão", "carne moída", "molho de tomate", "cebola", "alho", "queijo parmesão"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "5",
+        "nome": "Frango Xadrez",
+        "valor": "R$ 23.99",
+        "ingredientes": ["frango", "pimentão", "cebola", "amendoim", "molho de soja"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "6",
+        "nome": "Tacos de Camarão",
+        "valor": "R$ 28.50",
+        "ingredientes": ["tortilha", "camarão", "alface", "tomate", "creme azedo"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "7",
+        "nome": "Risoto de Funghi",
+        "valor": "R$ 32.00",
+        "ingredientes": ["arroz arbóreo", "funghi", "cebola", "caldo de legumes", "vinho branco", "queijo parmesão"],
+        "lactose": false,
+        "gluten": true,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "8",
+        "nome": "Sanduíche de Frango Grelhado",
+        "valor": "R$ 14.99",
+        "ingredientes": ["pão de hambúrguer", "frango grelhado", "alface", "tomate", "maionese"],
+        "lactose": false,
+        "gluten": true,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "9",
+        "nome": "Massa Carbonara",
+        "valor": "R$ 18.75",
+        "ingredientes": ["espaguete", "bacon", "queijo parmesão", "gemas de ovo", "pimenta preta"],
+        "lactose": false,
+        "gluten": true,
+        "vegetariano": false,
+        "porco": true
+      },
+      { 
+        "id": "10",
+        "nome": "Salada Caesar",
+        "valor": "R$ 16.50",
+        "ingredientes": ["alface romana", "croutons", "queijo parmesão", "molho caesar"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+        "id": "11",
+        "nome": "Wrap de Vegetais",
+        "valor": "R$ 12.99",
+        "ingredientes": ["tortilha", "alface", "tomate", "pepino", "cenoura", "molho de iogurte"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+        "id": "12",
+        "nome": "Sopa de Legumes",
+        "valor": "R$ 10.99",
+        "ingredientes": ["cenoura", "abóbora", "batata", "cebola", "alho", "caldo de legumes"],
+        "lactose": false,
+        "gluten": true,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+        "id": "13",
+        "nome": "Peixe Assado",
+        "valor": "R$ 24.50",
+        "ingredientes": ["peixe branco", "azeite de oliva", "limão", "ervas aromáticas"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "14",
+        "nome": "Salada de Frutas",
+        "valor": "R$ 12.99",
+        "ingredientes": ["morango", "banana", "uva", "kiwi", "laranja", "mel"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+        "id": "15",
+        "nome": "Mignon ao Molho de Mostarda",
+        "valor": "R$ 34.99",
+        "ingredientes": ["filé mignon", "mostarda", "cebola", "caldo de carne", "creme de leite", "azeite de oliva"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+        "id": "16",
+        "nome": "Cuscuz Marroquino",
+        "valor": "R$ 16.50",
+        "ingredientes": ["cuscuz", "legumes", "passas", "castanhas", "azeite de oliva", "temperos"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+        "id": "17",
+        "nome": "Omelete",
+        "valor": "R$ 13.50",
+        "ingredientes": ["ovos", "queijo", "tomate", "cebola", "salsinha"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+        "id": "18",
+        "nome": "Ratatouille",
+        "valor": "R$ 19.99",
+        "ingredientes": ["berinjela", "abobrinha", "pimentão", "tomate", "cebola", "alho", "azeite de oliva"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+        "id": "19",
+        "nome": "Lasanha de Legumes",
+        "valor": "R$ 22.50",
+        "ingredientes": ["massa de lasanha", "abobrinha", "berinjela", "cenoura", "queijo muçarela", "molho de tomate"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "20",
+        "nome": "Salada Caprese",
+        "valor": "R$ 15.75",
+        "ingredientes": ["tomate", "queijo muçarela", "manjericão", "azeite de oliva", "vinagre balsâmico"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "21",
+        "nome": "Quiche de Espinafre",
+        "valor": "R$ 16.99",
+        "ingredientes": ["massa de quiche", "espinafre", "queijo", "ovos", "creme de leite"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "22",
+        "nome": "Hambúrguer Vegetariano",
+        "valor": "R$ 12.99",
+        "ingredientes": ["pão", "hambúrguer de soja", "alface", "tomate", "molho especial"],
+        "lactose": false,
+        "gluten": true,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "23",
+        "nome": "Salada de Frango",
+        "valor": "R$ 16.50",
+        "ingredientes": ["alface", "peito de frango", "tomate", "cebola", "molho de iogurte"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+"id": "24",
+        "nome": "Risoto de Cogumelos",
+        "valor": "R$ 25.00",
+        "ingredientes": ["arroz arbóreo", "cogumelos variados", "cebola", "caldo de legumes", "vinho branco", "queijo parmesão"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+"id": "25",
+        "nome": "Camarão ao Alho e Óleo",
+        "valor": "R$ 35.99",
+        "ingredientes": ["camarão", "alho", "azeite de oliva", "ervas aromáticas"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+"id": "26",
+        "nome": "Strogonoff de Carne",
+        "valor": "R$ 27.50",
+        "ingredientes": ["carne bovina", "creme de leite", "cebola", "molho de tomate", "mostarda", "ketchup"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+  
+      { 
+"id": "27",
+        "nome": "Peixe Grelhado com Legumes",
+        "valor": "R$ 28.99",
+        "ingredientes": ["peixe branco", "azeite de oliva", "limão", "legumes variados"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+"id": "28",
+        "nome": "Salada de Quinoa",
+        "valor": "R$ 14.99",
+        "ingredientes": ["quinoa", "legumes variados", "azeite de oliva", "vinagre balsâmico"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "29",
+        "nome": "Panqueca de Frango",
+        "valor": "R$ 18.75",
+        "ingredientes": ["massa de panqueca", "frango desfiado", "queijo", "molho de tomate"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+"id": "30",
+        "nome": "Omelete de Vegetais",
+        "valor": "R$ 12.99",
+        "ingredientes": ["ovos", "legumes variados", "queijo", "salsinha"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "31",
+        "nome": "Ratatouille de Abobrinha",
+        "valor": "R$ 19.99",
+        "ingredientes": ["abobrinha", "pimentão", "tomate", "cebola", "alho", "azeite de oliva"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "32",
+        "nome": "Lasanha de Espinafre",
+        "valor": "R$ 22.50",
+        "ingredientes": ["massa de lasanha", "espinafre", "ricota", "molho branco", "queijo muçarela"],
+        "lactose": true,
+        "gluten": true,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "33",
+        "nome": "Salada Grega",
+        "valor": "R$ 15.75",
+        "ingredientes": ["tomate", "pepino", "azeitonas", "cebola roxa", "queijo feta", "azeite de oliva"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+  
+      { 
+"id": "34",
+        "nome": "Quiche de Tomate Seco",
+        "valor": "R$ 16.99",
+        "ingredientes": ["massa de quiche", "tomate seco", "queijo", "ovos", "creme de leite"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+"id": "35",
+        "nome": "Sopa de Abóbora",
+        "valor": "R$ 10.99",
+        "ingredientes": ["abóbora", "cebola", "alho", "caldo de legumes", "creme de leite"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "36",
+        "nome": "Filé Mignon ao Molho de Vinho",
+        "valor": "R$ 34.99",
+        "ingredientes": ["filé mignon", "vinho tinto", "cebola", "caldo de carne", "azeite de oliva"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": false,
+        "porco": false
+      },
+      { 
+"id": "37",
+        "nome": "Cuscuz Marroquino com Legumes",
+        "valor": "R$ 16.50",
+        "ingredientes": ["cuscuz", "legumes variados", "passas", "azeite de oliva", "temperos"],
+        "lactose": false,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "38",
+        "nome": "Torta de Legumes",
+        "valor": "R$ 13.50",
+        "ingredientes": ["massa de torta", "legumes variados", "queijo", "ovos", "creme de leite"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "39",
+        "nome": "Salada de Frutas com Iogurte",
+        "valor": "R$ 12.99",
+        "ingredientes": ["morango", "banana", "uva", "kiwi", "laranja", "iogurte"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      },
+      { 
+"id": "40",
+        "nome": "Penne ao Molho Pesto",
+        "valor": "R$ 18.75",
+        "ingredientes": ["penne", "manjericão", "queijo parmesão", "pinoli", "azeite de oliva"],
+        "lactose": true,
+        "gluten": false,
+        "vegetariano": true,
+        "porco": false
+      }
+  
+]
+
+  

@@ -19,7 +19,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Login")),
         body: Container(
             padding: const EdgeInsets.only(left: 40, right: 40),
             child: ListView(children: <Widget>[
@@ -118,36 +117,6 @@ class LoginScreen extends StatelessWidget {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) =>
                                           const SplashScreen()));
-                                  // showDialog(
-                                  //   context: context,
-                                  //   builder: (BuildContext context) {
-                                  //     return AlertDialog(
-                                  //       title: Text('username_true'.i18n(),
-                                  //           style:
-                                  //               const TextStyle(fontSize: 16)),
-                                  //       content: SingleChildScrollView(
-                                  //         child: ListBody(
-                                  //           children: const <Widget>[
-                                  //             Text(""),
-                                  //           ],
-                                  //         ),
-                                  //       ),
-                                  //       actions: <Widget>[
-                                  //         TextButton(
-                                  //           child: const Text('Ok',
-                                  //               style: TextStyle(fontSize: 16)),
-                                  //           onPressed: () {
-                                  //             Navigator.of(context).pop();
-                                  //             Navigator.of(context).push(
-                                  //                 MaterialPageRoute(
-                                  //                     builder: (context) =>
-                                  //                         const SplashScreen()));
-                                  //           },
-                                  //         ),
-                                  //       ],
-                                  //     );
-                                  //   },
-                                  // );
                                 }).catchError((error) {
                                   showDialog(
                                     context: context,

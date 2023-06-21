@@ -3,6 +3,7 @@ import 'package:marmita_social/src/feature/auth/presentation/view/page/signup_pa
 import 'package:marmita_social/src/feature/home/view/page/navigator-page.component.dart';
 import 'package:marmita_social/src/feature/home/view/widget/account.dart';
 import 'package:marmita_social/src/feature/home/view/widget/home.dart';
+import 'package:marmita_social/src/feature/home/view/widget/maps.dart';
 
 import 'dialogflow.dart';
 
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
             ),
             NavigatorPage(
               title: const Text('Account'),
-              child: const UserAccount(),
+              child: const Maps(),
             ),
           ],
         ),

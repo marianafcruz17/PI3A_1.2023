@@ -24,7 +24,6 @@ class _DialogFlow extends State<DialogFlow> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       /*appBar: AppBar(
         title: Text('Marmita Social'),
@@ -41,9 +40,7 @@ class _DialogFlow extends State<DialogFlow> {
                   Expanded(
                       child: TextField(
                     controller: _controller,
-                    style: TextStyle(
-                        color: Color.fromRGBO(
-                            10, 10, 10, 1) /*Color.fromARGB(255, 255, 0, 0)*/),
+                    style: TextStyle(color: Color.fromRGBO(10, 10, 10, 1)),
                   )),
                   IconButton(
                       onPressed: () {

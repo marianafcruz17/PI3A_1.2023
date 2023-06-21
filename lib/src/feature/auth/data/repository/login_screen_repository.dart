@@ -13,11 +13,6 @@ class LoginScreenRepository implements ILogin {
       Uri.parse('https://jwt.levite.vps-kinghost.net/api/users/auth'),
       headers: <String, String>{'Content-Type': 'application/json'},
       body: jsonEncode(dto.toJson()),
-
-      //data: dto.toJson(),
-      //queryParameters: {
-      //    'username': dto.toJson()['login'],
-      //    'password': dto.toJson()['password']
     );
 
     if (response.statusCode == 200) {

@@ -1,7 +1,6 @@
 import 'package:dialog_flowtter/dialog_flowtter.dart';
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/feature/home/view/widget/chat.dart';
-import 'package:marmita_social/src/feature/home/view/widget/config.dart';
+import 'package:marmita_social/src/feature/home/view/widget/maps.dart';
 
 import '../../../auth/presentation/view/page/signup_page.dart';
 import '../widget/account.dart';
@@ -24,7 +23,8 @@ class _HomePageState extends State<HomePage> {
     UserHome(),
     DialogFlow(),
     SignupScreen(),
-    UserAccount(),
+    Maps()
+    //UserAccount(),
   ];
 
   void _navigateBottomNavBar(int index) {
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Marmita Social'),
+        title: const Text('Marmita Social'),
         actions: [
           IconButton(
             icon: const ImageIcon(
@@ -48,12 +48,12 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {},
           ),
         ],
-        backgroundColor: Color.fromARGB(255, 58, 152, 185),
+        backgroundColor: const Color.fromARGB(255, 58, 152, 185),
       ),
       backgroundColor: Colors.blue,
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 58, 152, 185),
+        backgroundColor: const Color.fromARGB(255, 58, 152, 185),
         selectedItemColor: Colors.white,
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
