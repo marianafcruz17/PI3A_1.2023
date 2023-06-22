@@ -7,10 +7,10 @@ class DialogFlow extends StatefulWidget {
   const DialogFlow({super.key});
 
   @override
-  _DialogFlow createState() => _DialogFlow();
+  DialogFlowState createState() => DialogFlowState();
 }
 
-class _DialogFlow extends State<DialogFlow> {
+class DialogFlowState extends State<DialogFlow> {
   late DialogFlowtter dialogFlowtter;
   final TextEditingController _controller = TextEditingController();
 
@@ -28,38 +28,36 @@ class _DialogFlow extends State<DialogFlow> {
       /*appBar: AppBar(
         title: Text('Marmita Social'),
       ),*/
-      body: Container(
-        child: Column(
-          children: [
-            Expanded(child: MessagesScreen(messages: messages)),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-              color: Color.fromARGB(255, 223, 227, 230),
-              child: Row(
-                children: [
-                  Expanded(
-                      child: TextField(
-                    controller: _controller,
-                    style: TextStyle(color: Color.fromRGBO(10, 10, 10, 1)),
-                  )),
-                  IconButton(
-                      onPressed: () {
-                        sendMessage(_controller.text);
-                        _controller.clear();
-                      },
-                      icon: Icon(Icons.send))
-                ],
-              ),
-            )
-          ],
-        ),
+      body: Column(
+        children: [
+          Expanded(child: MessagesScreen(messages: messages)),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+            color: const Color.fromARGB(255, 223, 227, 230),
+            child: Row(
+              children: [
+                Expanded(
+                    child: TextField(
+                  controller: _controller,
+                  style: const TextStyle(color: Color.fromRGBO(10, 10, 10, 1)),
+                )),
+                IconButton(
+                    onPressed: () {
+                      sendMessage(_controller.text);
+                      _controller.clear();
+                    },
+                    icon: const Icon(Icons.send))
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
 
   sendMessage(String text) async {
     if (text.isEmpty) {
-      print('Mensagem Vazia');
+      debugPrint('Mensagem Vazia');
     } else {
       setState(() {
         addMessage(Message(text: DialogText(text: [text])), true);

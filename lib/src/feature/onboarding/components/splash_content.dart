@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/feature/onboarding/components/size_config.dart';
 
 class SplashContent extends StatelessWidget {
   const SplashContent({
     Key? key,
     this.text,
-    this.sub_text,
+    this.subText,
     this.image,
   }) : super(key: key);
 
-  final String? text, sub_text, image;
+  final String? text, subText, image;
 
   @override
   Widget build(BuildContext context) {
@@ -18,21 +17,26 @@ class SplashContent extends StatelessWidget {
         const Spacer(),
         Image.asset(
           image!,
-          height: getProportionateScreenHeight(300),
-          width: getProportionateScreenWidth(235),
+          height: 300,
+          width: 325,
         ),
         const Spacer(flex: 2),
         Text(
           text!,
           textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(20),
-            color: const Color.fromARGB(255, 0, 0, 0),
+          style: const TextStyle(
+            fontSize: 16,
+            color: Color.fromARGB(255, 0, 0, 0),
+            fontWeight: FontWeight.bold,
           ),
         ),
         const Spacer(flex: 3),
         Text(
-          sub_text!,
+          subText!,
+          style: const TextStyle(
+            fontSize: 14,
+            color: Color.fromARGB(255, 0, 0, 0),
+          ),
           textAlign: TextAlign.center,
         )
       ],

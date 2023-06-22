@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
 class NavigatorPage extends StatefulWidget {
-  NavigatorPage({this.title, required this.child});
+  const NavigatorPage({super.key, this.title, required this.child});
 
   final Widget? title;
   final Widget child;
 
   @override
-  _NavigatorPageState createState() => _NavigatorPageState();
+  NavigatorPageState createState() => NavigatorPageState();
 }
 
-class _NavigatorPageState extends State<NavigatorPage> {
-  int _currentRoute = 0;
-
+class NavigatorPageState extends State<NavigatorPage> {
   @override
   void initState() {
     super.initState();

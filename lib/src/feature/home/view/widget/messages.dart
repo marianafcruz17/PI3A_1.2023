@@ -5,10 +5,10 @@ class MessagesScreen extends StatefulWidget {
   const MessagesScreen({super.key, required this.messages});
 
   @override
-  _MessagesScreenState createState() => _MessagesScreenState();
+  MessagesScreenState createState() => MessagesScreenState();
 }
 
-class _MessagesScreenState extends State<MessagesScreen> {
+class MessagesScreenState extends State<MessagesScreen> {
   @override
   Widget build(BuildContext context) {
     var w = MediaQuery.of(context).size.width;

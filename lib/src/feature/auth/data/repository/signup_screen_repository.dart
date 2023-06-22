@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'package:flutter/material.dart';
 import 'package:marmita_social/src/feature/auth/data/dto/signup_dto.dart';
 import 'package:marmita_social/src/feature/auth/domain/model/signup.dart';
 import 'dart:convert';
@@ -14,11 +14,9 @@ class SignupScreenRepository implements ISignup {
       headers: <String, String>{'Content-Type': 'application/json'},
       body: jsonEncode(dto.toJson()),
     );
-    https: //jwt.levite.vps-kinghost.net/api/users/auth
-
     if (response.statusCode == 200 || response.statusCode == 201) {
       //final token = response.headers.value('Authorization');
-      print(response.headers);
+      debugPrint(response.headers.toString());
       final domain = SignupUser(
           user.username,
           user.birth,

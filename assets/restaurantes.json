@@ -7,7 +7,10 @@
       "lactose" : false,
       "gluten" : true,
       "vegetariano" : true,
-      "porco" : false
+      "porco" : false,
+      "cardapio":"http",
+      "recomendado":true
+      
     },
     {
       "id": "2",

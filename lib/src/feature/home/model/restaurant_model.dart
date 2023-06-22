@@ -1,7 +1,7 @@
 class Restaurant {
   final String id;
-  final double latitude;
-  final double longitude;
+  double? latitude;
+  double? longitude;
   final String name;
   final bool lactose;
   final bool gluten;

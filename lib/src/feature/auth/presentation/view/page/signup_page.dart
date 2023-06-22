@@ -12,10 +12,6 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-  late ColorScheme _colors;
-
-  late ThemeData _theme;
-
   bool lactoseIsChecked = false;
   bool glutenIsChecked = false;
   bool vegetarianoIsChecked = false;
@@ -488,7 +484,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 builder: (BuildContext context) {
                                   return AlertDialog(
                                     title: Text('register_True'.i18n(),
-                                        style: TextStyle(fontSize: 16)),
+                                        style: const TextStyle(fontSize: 16)),
                                     content: SingleChildScrollView(
                                       child: ListBody(
                                         children: const <Widget>[

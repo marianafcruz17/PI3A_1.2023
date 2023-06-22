@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 import 'package:marmita_social/src/feature/auth/domain/usecase/login_screen_usecase.dart';
 import 'package:marmita_social/src/feature/auth/presentation/view/page/signup_page.dart';
-import 'package:marmita_social/src/feature/onboarding/presentation/view/page/splash_screen.dart';
+
+import '../../../../onboarding/components/body.dart';
 
 //import 'signup_page.dart';
 
 class LoginScreen extends StatelessWidget {
-  late ColorScheme _colors;
-  late Theme Data_theme;
-
   final loginTextFieldController = TextEditingController();
   final passwordTextFieldController = TextEditingController();
   final loginUseCase = LoginUseCase();
@@ -113,10 +111,8 @@ class LoginScreen extends StatelessWidget {
                                     .login(loginTextFieldController.text,
                                         passwordTextFieldController.text)
                                     .then((msg) {
-                                  Navigator.of(context).pop();
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SplashScreen()));
+                                      builder: (context) => const Body()));
                                 }).catchError((error) {
                                   showDialog(
                                     context: context,

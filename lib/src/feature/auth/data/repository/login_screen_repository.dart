@@ -8,7 +8,6 @@ class LoginScreenRepository implements ILogin {
   @override
   Future<User> login(User user) async {
     final dto = UserDto.fromDomain(user);
-    final Map<String, dynamic> jsonData = {'key1': 'value1', 'key2': 'value2'};
     final response = await http.post(
       Uri.parse('https://jwt.levite.vps-kinghost.net/api/users/auth'),
       headers: <String, String>{'Content-Type': 'application/json'},
@@ -19,8 +18,8 @@ class LoginScreenRepository implements ILogin {
       final domain = User(user.username, user.password);
       return Future.value(domain);
     } else {
-      final msg = "Usuário Incorreto ou Inexistente";
-      return Future.error("$msg");
+      const msg = "Usuário Incorreto ou Inexistente";
+      return Future.error(msg);
     }
   }
 }

@@ -1,22 +1,47 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
 
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import '../../model/restaurant_model.dart';
 import 'cards.dart';
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});
 
+  Future<String> _carregaJson() async {
+    return await rootBundle.loadString('assets/restaurantes.json');
+  }
+
+  Future<List<Restaurant>> _parseJson() async {
+    String jsonString = await _carregaJson();
+    List<dynamic> jsonList = jsonDecode(jsonString);
+    return jsonList.map((json) => Restaurant.fromJson(json)).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: ListView.separated(
-      padding: const EdgeInsets.all(12),
-      itemCount: 10,
-      separatorBuilder: (BuildContext context, int index) {
-        return const SizedBox(height: 12);
-      },
-      itemBuilder: (context, index) {
-        return Cards(index: index);
-      },
-    ));
+    return FutureBuilder<List<Restaurant>>(
+        future: _parseJson(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            List<Restaurant> restaurantes = snapshot.data!;
+            return ListView.separated(
+              padding: const EdgeInsets.all(12),
+              itemCount: restaurantes.length,
+              separatorBuilder: (BuildContext context, int index) {
+                return const SizedBox(height: 12);
+              },
+              itemBuilder: (context, index) {
+                Restaurant restaurante = restaurantes[index];
+                return Cards(index: index, restaurante: restaurante);
+              },
+            );
+          } else if (snapshot.hasError) {
+            return const Text("Erro ao carregar json");
+          } else {
+            return const CircularProgressIndicator();
+          }
+        });
   }
 }

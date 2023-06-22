@@ -10,10 +10,10 @@ class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
 
   @override
-  _BodyState createState() => _BodyState();
+  BodyState createState() => BodyState();
 }
 
-class _BodyState extends State<Body> {
+class BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
@@ -53,7 +53,7 @@ class _BodyState extends State<Body> {
                   itemCount: splashData.length,
                   itemBuilder: (context, index) => SplashContent(
                     text: splashData[currentPage]['text'],
-                    sub_text: splashData[currentPage]['sub_text'],
+                    subText: splashData[currentPage]['sub_text'],
                     image: splashData[currentPage]["image"],
                   ),
                 ),
@@ -61,22 +61,22 @@ class _BodyState extends State<Body> {
               Expanded(
                 flex: 1,
                 child: Column(children: <Widget>[
-                  Spacer(),
+                  const Spacer(),
                   if (currentPage == 2)
                     DefaultButton(
                       text: 'onboars_button'.i18n(),
                       press: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HomePage()));
+                            builder: (context) => const HomePage()));
                       },
                     ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: List.generate(
                         splashData.length, (index) => buildDot(index: index)),
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ]),
               )
             ],
@@ -88,14 +88,14 @@ class _BodyState extends State<Body> {
 
   AnimatedContainer buildDot({int? index}) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 200),
-      margin: EdgeInsets.only(right: 7),
+      duration: const Duration(milliseconds: 200),
+      margin: const EdgeInsets.only(right: 7),
       height: 15,
       width: 15,
       decoration: BoxDecoration(
         color: currentPage == index
-            ? Color.fromARGB(225, 65, 62, 62)
-            : Color(0xFFD8D8D8),
+            ? const Color.fromARGB(225, 65, 62, 62)
+            : const Color(0xFFD8D8D8),
         borderRadius: BorderRadius.circular(6),
       ),
     );

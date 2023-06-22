@@ -1,9 +1,7 @@
 import 'package:dialog_flowtter/dialog_flowtter.dart';
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/feature/home/view/widget/maps.dart';
 
 import '../../../auth/presentation/view/page/signup_page.dart';
-import '../widget/account.dart';
 import '../widget/home.dart';
 import 'dialogflow.dart';
 
@@ -23,7 +21,6 @@ class _HomePageState extends State<HomePage> {
     UserHome(),
     DialogFlow(),
     SignupScreen(),
-    Maps()
     //UserAccount(),
   ];
 
