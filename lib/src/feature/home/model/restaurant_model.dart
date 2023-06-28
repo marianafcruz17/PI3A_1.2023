@@ -7,6 +7,7 @@ class Restaurant {
   final bool gluten;
   final bool vegetariano;
   final bool porco;
+  final String distancia;
 
   Restaurant({
     required this.id,
@@ -17,17 +18,20 @@ class Restaurant {
     required this.gluten,
     required this.vegetariano,
     required this.porco,
+    required this.distancia,
   });
 
   factory Restaurant.fromJson(Map<String, dynamic> json) {
     return Restaurant(
-        id: json['id'],
-        latitude: json['latitude'],
-        longitude: json['longitude'],
-        name: json['name'],
-        lactose: json['lactose'],
-        gluten: json['gluten'],
-        vegetariano: json['vegetariano'],
-        porco: json['porco']);
+      id: json['id'],
+      latitude: json['latitude'],
+      longitude: json['longitude'],
+      name: json['name'],
+      lactose: json['lactose'],
+      gluten: json['gluten'],
+      vegetariano: json['vegetariano'],
+      porco: json['porco'],
+      distancia: json['distancia'],
+    );
   }
 }

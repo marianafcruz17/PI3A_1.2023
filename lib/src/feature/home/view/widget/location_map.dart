@@ -87,7 +87,7 @@ class _LocationMapState extends State<LocationMap> {
           children: [
             TextButton.icon(
               icon: const Icon(Icons.map),
-              label: const Text('Selecione no Mapa'),
+              label: const Text('Ampliar Mapa'),
               onPressed: _selectOnMap,
             ),
           ],

@@ -36,10 +36,10 @@ class Cards extends StatelessWidget {
           Column(
             children: [
               Text(restaurante.name),
-              Text(restaurante.id),
+              //Text(restaurante.id),
             ],
           ),
-          Text(restaurante.id),
+          Text("${restaurante.distancia}km"),
         ],
       ),
     );

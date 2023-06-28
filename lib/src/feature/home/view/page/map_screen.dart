@@ -10,17 +10,25 @@ class MapScreen extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<MapScreen> createState() => _MapScreenState();
+  State<MapScreen> createState() => MapScreenState();
 }
 
-class _MapScreenState extends State<MapScreen> {
+Future<BitmapDescriptor> createCustomIcon() async {
+  final image = await BitmapDescriptor.fromAssetImage(
+    const ImageConfiguration(size: Size(48, 48)),
+    'assets/images/pointer_restauran2.png',
+  );
+  return image;
+}
+
+class MapScreenState extends State<MapScreen> {
   LatLng? _pickedPosition;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Selecione'),
+        title: const Text('Localização'),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 58, 152, 185),
       ),
@@ -30,7 +38,7 @@ class _MapScreenState extends State<MapScreen> {
             widget.initialLocation.latitude,
             widget.initialLocation.longitude,
           ),
-          zoom: 13,
+          zoom: 15,
         ),
         markers: {
           Marker(

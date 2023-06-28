@@ -9,7 +9,8 @@
       "vegetariano" : true,
       "porco" : false,
       "cardapio":"http",
-      "recomendado":true
+      "recomendado":true,
+      "distancia":"1.6"
       
     },
     {
@@ -20,7 +21,10 @@
       "lactose" : true,
       "gluten" : false,
       "vegetariano" : true,
-      "porco" : false
+      "porco" : false,
+      "cardapio":"http",
+      "recomendado":true,
+      "distancia":"2.5"
     },
     {
       "id": "3",
@@ -30,7 +34,10 @@
       "lactose" : false,
       "gluten" : true,
       "vegetariano" : true,
-      "porco" : false
+      "porco" : false,
+      "cardapio":"http",
+      "recomendado":true,
+      "distancia":"0.8"
       },
       {
       "id": "4",
@@ -40,7 +47,10 @@
       "lactose" : false,
       "gluten" : true,
       "vegetariano" : false,
-      "porco" : false
+      "porco" : false,
+      "cardapio":"http",
+      "recomendado":true,
+      "distancia":"1.9"
       },
       {
       "id": "5",
@@ -50,7 +60,10 @@
       "lactose" : false,
       "gluten" : true,
       "vegetariano" : false,
-      "porco" : false
+      "porco" : false,
+      "cardapio":"http",
+      "recomendado":true,
+      "distancia":"3.7"
       },
       {
       "id": "6",
@@ -60,7 +73,10 @@
       "lactose" : true,
       "gluten" : true,
       "vegetariano" : true,
-      "porco" : true
+      "porco" : true,
+      "cardapio":"http",
+      "recomendado":true,
+      "distancia":"6.2"
       },
       {
       "id": "7",
@@ -70,7 +86,10 @@
       "lactose" : true,
       "gluten" : true,
       "vegetariano" : true,
-      "porco" : true
+      "porco" : true,
+      "cardapio":"http",
+      "recomendado":true,
+      "distancia":"2.8"
       },
       {
       "id": "8",
@@ -80,7 +99,10 @@
       "lactose" : false,
       "gluten" : true,
       "vegetariano" : true,
-      "porco" : false
+      "porco" : false,
+      "cardapio":"http",
+      "recomendado":true,
+      "distancia":"3.7"
       },
       {
         "id": "9",
@@ -90,7 +112,10 @@
         "lactose" : false,
         "gluten" : true,
         "vegetariano" : true,
-        "porco" : false
+        "porco" : false,
+        "cardapio":"http",
+        "recomendado":true,
+        "distancia":"2.4"
         }
     
   ]

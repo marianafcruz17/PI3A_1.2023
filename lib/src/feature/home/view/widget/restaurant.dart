@@ -21,7 +21,7 @@ class Restaurates extends StatelessWidget {
           children: [
             Expanded(
               child: Image.asset(
-                "lib/assets/images/alimentos.png",
+                "lib/assets/images/cardapio2.png", // alterar pelo restaurant.cardapio
               ),
             ),
             const SizedBox(height: 20),
