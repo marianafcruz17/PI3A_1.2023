@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 import '../../model/restaurant_model.dart';
 import 'cards.dart';
@@ -15,8 +16,21 @@ class UserHome extends StatelessWidget {
 
   Future<List<Restaurant>> _parseJson() async {
     String jsonString = await _carregaJson();
-    List<dynamic> jsonList = jsonDecode(jsonString);
-    return jsonList.map((json) => Restaurant.fromJson(json)).toList();
+    final response = await http.post(
+      Uri.parse('http://127.0.0.1:5000'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonString,
+    );
+
+    if (response.statusCode == 200) {
+      List<dynamic> jsonList = jsonDecode(response.body);
+      debugPrint(response.body);
+
+      return jsonList.map((json) => Restaurant.fromJson(json)).toList();
+    } else {
+      debugPrint('Erro ao fazer a solicitação: ${response.statusCode}');
+      return [];
+    }
   }
 
   @override
@@ -28,7 +42,7 @@ class UserHome extends StatelessWidget {
             List<Restaurant> restaurantes = snapshot.data!;
             return ListView.separated(
               padding: const EdgeInsets.all(12),
-              itemCount: restaurantes.length,
+              itemCount: restaurantes.length + 1,
               separatorBuilder: (BuildContext context, int index) {
                 return const SizedBox(height: 12);
               },

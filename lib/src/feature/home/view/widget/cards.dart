@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:marmita_social/src/feature/home/view/widget/restaurant.dart';
-
 import '../../model/restaurant_model.dart';
 
 class Cards extends StatelessWidget {
