@@ -24,7 +24,7 @@ class UserHome extends StatelessWidget {
 
     if (response.statusCode == 200) {
       List<dynamic> jsonList = jsonDecode(response.body);
-      debugPrint(response.body);
+      debugPrint("Deu certo ${response.body}");
 
       return jsonList.map((json) => Restaurant.fromJson(json)).toList();
     } else {
@@ -37,12 +37,14 @@ class UserHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder<List<Restaurant>>(
         future: _parseJson(),
+        initialData: const [],
         builder: (context, snapshot) {
           if (snapshot.hasData) {
+            debugPrint('Entrou no IF');
             List<Restaurant> restaurantes = snapshot.data!;
             return ListView.separated(
               padding: const EdgeInsets.all(12),
-              itemCount: restaurantes.length + 1,
+              itemCount: restaurantes.length,
               separatorBuilder: (BuildContext context, int index) {
                 return const SizedBox(height: 12);
               },
@@ -52,7 +54,7 @@ class UserHome extends StatelessWidget {
               },
             );
           } else if (snapshot.hasError) {
-            return const Text("Erro ao carregar json");
+            return Text("Erro ao carregar os dados: ${snapshot.error}");
           } else {
             return const CircularProgressIndicator();
           }

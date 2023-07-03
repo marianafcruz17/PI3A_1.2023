@@ -8,7 +8,7 @@ class Restaurant {
   final bool vegetariano;
   final bool porco;
   bool recomendado;
-  String distancia;
+  double? distancia;
 
   Restaurant({
     required this.id,
