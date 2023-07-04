@@ -17,12 +17,12 @@ class UserHome extends StatelessWidget {
   Future<List<Restaurant>> _parseJson() async {
     String jsonString = await _carregaJson();
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:5000'),
+      Uri.parse('http://192.168.56.1:5001'),
       headers: {'Content-Type': 'application/json'},
       body: jsonString,
     );
 
-    if (response.statusCode == 200) {
+    if (response.statusCode == 200 || response.statusCode == 201) {
       List<dynamic> jsonList = jsonDecode(response.body);
       debugPrint("Deu certo ${response.body}");
 
