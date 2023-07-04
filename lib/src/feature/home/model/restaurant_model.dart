@@ -33,7 +33,7 @@ class Restaurant {
       gluten: json['gluten_user'],
       vegetariano: json['vegetariano_user'],
       porco: json['porco_user'],
-      recomendado: json['recomendado'],
+      recomendado: json['recomendacao'],
       distancia: json['distancia'],
     );
   }

@@ -26,7 +26,7 @@ class Cards extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Image.asset(
-              "lib/assets/images/alimentos.png",
+              "lib/assets/images/restaurantIcon.png",
               height: 100,
               width: 100,
               fit: BoxFit.cover,

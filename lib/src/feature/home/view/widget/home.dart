@@ -24,8 +24,6 @@ class UserHome extends StatelessWidget {
 
     if (response.statusCode == 200 || response.statusCode == 201) {
       List<dynamic> jsonList = jsonDecode(response.body);
-      debugPrint("Deu certo ${response.body}");
-
       return jsonList.map((json) => Restaurant.fromJson(json)).toList();
     } else {
       debugPrint('Erro ao fazer a solicitação: ${response.statusCode}');
@@ -37,10 +35,8 @@ class UserHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder<List<Restaurant>>(
         future: _parseJson(),
-        initialData: const [],
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            debugPrint('Entrou no IF');
             List<Restaurant> restaurantes = snapshot.data!;
             return ListView.separated(
               padding: const EdgeInsets.all(12),
@@ -50,7 +46,12 @@ class UserHome extends StatelessWidget {
               },
               itemBuilder: (context, index) {
                 Restaurant restaurante = restaurantes[index];
-                return Cards(index: index, restaurante: restaurante);
+                if (restaurante.recomendado) {
+                  return Cards(index: index, restaurante: restaurante);
+                } else {
+                  return null;
+                }
+                //return Cards(index: index, restaurante: restaurante);
               },
             );
           } else if (snapshot.hasError) {
