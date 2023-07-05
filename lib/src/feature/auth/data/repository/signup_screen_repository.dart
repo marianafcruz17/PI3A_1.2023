@@ -10,7 +10,7 @@ class SignupScreenRepository implements ISignup {
   Future<SignupUser> signup(SignupUser user) async {
     final dto = SignUpDto.fromDomain(user);
     final response = await http.post(
-      Uri.parse('https://jwt.levite.vps-kinghost.net/api/users/'),
+      Uri.parse('https://marmita-social.levite.vps-kinghost.net/api/users'),
       headers: <String, String>{'Content-Type': 'application/json'},
       body: jsonEncode(dto.toJson()),
     );
@@ -18,14 +18,17 @@ class SignupScreenRepository implements ISignup {
       //final token = response.headers.value('Authorization');
       debugPrint(response.headers.toString());
       final domain = SignupUser(
-          user.username,
-          user.birth,
-          user.cep,
-          user.email,
-          user.password,
-          user.confirmPassword,
-          user.intoleranciaAlimentar,
-          user.restricaoAlimentar /*token: token*/);
+        user.username,
+        user.birth,
+        user.cep,
+        user.email,
+        user.password,
+        user.confirmPassword,
+        user.lactose,
+        user.gluten,
+        user.vegetariano,
+        user.porco, /*token: token*/
+      );
       return Future.value(domain);
     } else {
       throw Exception(response.headers['Message']);

@@ -43,8 +43,6 @@ class _SignupScreenState extends State<SignupScreen> {
       return Colors.blue;
     }
 
-    List<String> intoleranciaItems = [];
-    List<String> restricaoItems = [];
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'app_name'.i18n(),
@@ -459,14 +457,6 @@ class _SignupScreenState extends State<SignupScreen> {
                         height: 40,
                         child: ElevatedButton(
                           onPressed: () => {
-                            if (lactoseIsChecked)
-                              {intoleranciaItems.add("lactose")},
-                            if (glutenIsChecked)
-                              {intoleranciaItems.add("gluten")},
-                            if (vegetarianoIsChecked)
-                              {restricaoItems.add("vegetariano")},
-                            if (porcoIsChecked)
-                              {restricaoItems.add("naoComoPorco")},
                             signupUseCase
                                 .signup(
                                     usernameTextFieldController.text,
@@ -476,8 +466,10 @@ class _SignupScreenState extends State<SignupScreen> {
                                     birthTextFieldController.text,
                                     passwordTextFieldController.text,
                                     confirmPasswordTextFieldController.text,
-                                    intoleranciaItems,
-                                    restricaoItems)
+                                    lactoseIsChecked,
+                                    glutenIsChecked,
+                                    vegetarianoIsChecked,
+                                    porcoIsChecked)
                                 .then((msg) {
                               showDialog(
                                 context: context,

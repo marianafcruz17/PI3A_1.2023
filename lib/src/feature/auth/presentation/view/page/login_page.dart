@@ -113,8 +113,6 @@ class LoginScreen extends StatelessWidget {
                                     .then((msg) {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) => const Body()));
-                                  debugPrint(
-                                      "Tô printando isso aqui ${loginTextFieldController}");
                                 }).catchError((error) {
                                   showDialog(
                                     context: context,

@@ -38,5 +38,6 @@
     "food": "Food",
     "quantity": "Quantity",
     "in_development": "In Development.",
-    "gluten":"Gluten"
+    "gluten":"Gluten",
+    "edit":"Edit"
 }

@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'package:localstorage/localstorage.dart';
 
 import '../../model/restaurant_model.dart';
 import 'cards.dart';
@@ -12,21 +11,7 @@ class UserHome extends StatelessWidget {
   const UserHome({super.key});
 
   Future<String> _carregaJson() async {
-    var data = await rootBundle.loadString('assets/restaurantes.json');
-    List jsonData = json.decode(data);
-    final LocalStorage storage = LocalStorage('marmita_app.json');
-    //var loggedUser = storage.getItem('loggedUser');
-    Map<String, dynamic> loggedUser =
-        json.decode(storage.getItem('loggedUser'));
-    print(jsonData.length.toString());
-    for (var i = 0; i < jsonData.length; i++) {
-      print(jsonData[i]);
-      jsonData[i]['lactose_user'] = loggedUser['lactose_user'];
-      jsonData[i]['vegetariano_user'] = loggedUser['vegetariano_user'];
-      jsonData[i]['porco_user'] = loggedUser['porco_user'];
-      jsonData[i]['gluten_user'] = loggedUser['gluten_user'];
-    }
-    return jsonData.toString();
+    return await rootBundle.loadString('assets/restaurantes.json');
   }
 
   Future<List<Restaurant>> _parseJson() async {
@@ -66,6 +51,7 @@ class UserHome extends StatelessWidget {
                 } else {
                   return null;
                 }
+                //return Cards(index: index, restaurante: restaurante);
               },
             );
           } else if (snapshot.hasError) {

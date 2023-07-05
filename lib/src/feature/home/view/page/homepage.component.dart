@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:marmita_social/src/feature/auth/presentation/view/page/signup_page.dart';
 import 'package:marmita_social/src/feature/home/view/page/navigator-page.component.dart';
 import 'package:marmita_social/src/feature/home/view/widget/home.dart';
 
+import '../widget/settings.dart';
 import 'dialogflow.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,7 +32,8 @@ class HomePageState extends State<HomePage> {
             ),
             NavigatorPage(
               title: Text('Settings'),
-              child: SignupScreen(),
+              child: Settings(),
+              //child: SignupScreen(),
             ),
           ],
         ),

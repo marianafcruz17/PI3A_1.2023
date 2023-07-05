@@ -121,8 +121,10 @@ class SignupUseCase {
       String birth,
       String password,
       String confirmPassword,
-      List<String> intoleranciaAlimentar,
-      List<String> restricaoAlimentar) {
+      bool lactose,
+      bool gluten,
+      bool vegetariano,
+      bool porco) {
     var respValidateAllFields = validateAllFields(
         username, /* name,*/ email, birth, password, confirmPassword);
 
@@ -130,15 +132,8 @@ class SignupUseCase {
       final msg = respValidateAllFields[1];
       return Future.error(msg);
     } else {
-      return repository.signup(SignupUser(
-          username,
-          /*name ,*/ email,
-          cep,
-          birth,
-          password,
-          confirmPassword,
-          intoleranciaAlimentar,
-          restricaoAlimentar));
+      return repository.signup(SignupUser(username, email, cep, birth, password,
+          confirmPassword, lactose, gluten, vegetariano, porco));
     }
   }
 }

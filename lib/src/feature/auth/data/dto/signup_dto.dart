@@ -1,8 +1,18 @@
 import 'package:marmita_social/src/feature/auth/domain/model/signup.dart';
 
 class SignUpDto {
-     const SignUpDto(this.username, this.email, this.cep, this.birth, this.password,
-      this.confirmPassword, this.intoleranciaAlimentar, this.restricaoAlimentar, this.token);
+  const SignUpDto(
+      this.username,
+      this.email,
+      this.cep,
+      this.birth,
+      this.password,
+      this.confirmPassword,
+      this.lactose,
+      this.gluten,
+      this.vegetariano,
+      this.porco,
+      this.token);
 
   final String username;
   final String email;
@@ -10,8 +20,10 @@ class SignUpDto {
   final String birth;
   final String password;
   final String confirmPassword;
-  final List<String> intoleranciaAlimentar;
-  final List<String> restricaoAlimentar;
+  final bool lactose;
+  final bool gluten;
+  final bool vegetariano;
+  final bool porco;
   final String? token;
 
   factory SignUpDto.fromDomain(SignupUser user) {
@@ -22,22 +34,25 @@ class SignUpDto {
         user.birth,
         user.password,
         user.confirmPassword,
-        user.intoleranciaAlimentar,
-        user.restricaoAlimentar,
+        user.lactose,
+        user.gluten,
+        user.vegetariano,
+        user.porco,
         user.token);
   }
 
   factory SignUpDto.fromJson(Map<String, dynamic> json) => SignUpDto(
-        json['username'],
-        json['email'],
-        json['cep'],
-        json['birth'],
-        json['password'],
-        json['confirmPassword'],
-        json['intoleranciaAlimentar'],
-        json['restricaoAlimentar'],
-        json['token']
-      );
+      json['username'],
+      json['email'],
+      json['cep'],
+      json['birth'],
+      json['password'],
+      json['confirmPassword'],
+      json['lactose'],
+      json['gluten'],
+      json['vegetariano'],
+      json['porco'],
+      json['token']);
 
   Map<String, dynamic> toJson() => {
         'login': username,
@@ -46,7 +61,9 @@ class SignUpDto {
         'cep': cep,
         'admin': false,
         'dataNascimento': birth,
-        'intoleranciaAlimentar': intoleranciaAlimentar,
-        'restricaoAlimentar': restricaoAlimentar,
+        'lactose': lactose,
+        'gluten': gluten,
+        'vegetariano': vegetariano,
+        'porco': porco
       };
 }
